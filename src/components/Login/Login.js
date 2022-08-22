@@ -1,20 +1,70 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import LogForm from "../../Assets/loginImg1.svg";
 import "./Login.css";
-import WemaForm from "../../Assets/Wema.svg"
+// import WemaForm from "../../Assets/Wema.svg";
 
 const Login = () => {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [checkbox, setCheckbox] = useState(false);
+  const navigate = useNavigate();
   // const data = useState("");
   // const email = data[0];
   // const setEmail = data[1];
+
+  useEffect(() => {
+    console.log("mounted");
+
+    // return () => console.log("unmounted");   
+  }, []);
+
+  const handleSubmit = (params) => {
+    params.preventDefault();
+    if(checkbox !== true || password === "" || email === "") {
+        return;
+    }
+      const payload = {
+        email,
+        password,
+      };
+      // TODO - CALL ENDPOINT
+      const url = `${process.env.REACT_APP_BASE_URL}/users`;  
+      
+      // const headers = new Headers();
+      // headers.append("Content-Type,application/json; charset=utf-8");
+      
+      // fetch({
+      //   method:"post",
+      //   body: JSON.stringify(payload),
+      //   headers:{"Content-Type":"application/json; charset=utf-8"}
+      // });
+
+      // fetch({
+      //   method:"post",
+      //   body: JSON.stringify(payload),
+      //   headers:headers
+      // });
+      fetch(url)
+      .then(response => response.json())
+      
+      .then(response => {
+        const user = response.filter(value => value.email === email.toLowerCase() && value.password === password);
+        if(user[0].email) {
+          // navigate to dashboard
+          navigate("/dashboard");
+
+        }
+      })
+      .catch(error => console.error(error));
+
+  }
+
   return (
     <section className="wrapper">
-      <img alt="" className="img-form" src={LogForm} lazy />
+      <img alt="" className="img-form" src={LogForm} />
       {/* <LogForm /> */}
 
       <div className="move1">
@@ -30,7 +80,7 @@ const Login = () => {
                 type="email"
                 placeholder="Enter email"
                 required
-                maxLength={20}
+                maxLength={30}
                 className="form-input"
                 value={email}
                 onChange={(e) => {
@@ -44,7 +94,7 @@ const Login = () => {
                 type="password"
                 placeholder="Enter password"
                 required
-                maxLength={16}
+                maxLength={20}
                 className="form-input"
                 value={password}
                 onChange={(e) => {
@@ -58,7 +108,10 @@ const Login = () => {
                   type="checkbox"
                   value={checkbox}
                   id="flexCheckDefault"
-                  onClick = {(e) => {setCheckbox(e.target.checked); console.log(checkbox)}}
+                  onClick={(e) => {
+                    setCheckbox(e.target.checked);
+                    console.log(checkbox);
+                  }}
                 />
                 <label
                   className="form-check-label labelise"
@@ -69,7 +122,7 @@ const Login = () => {
               </div>
 
               <div>
-                <Button type="submit" size="sm" className="btn-primary mb-3">
+                <Button type="submit" size="sm" className="btn-primary mb-3" onClick  = {handleSubmit}>
                   Login
                 </Button>
               </div>
@@ -86,9 +139,9 @@ const Login = () => {
           </div>
         </form>
       </div>
-      <div className="img2-form">
+      {/* <div className="img2-form">
         <img alt="" src={WemaForm} lazy />
-      </div>
+      </div> */}
     </section>
   );
 };

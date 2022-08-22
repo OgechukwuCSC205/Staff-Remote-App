@@ -12,7 +12,6 @@
 .wrapper {
   display: flex;
   flex-direction: row;
-  background-color: #843477;
   height: 100vh; 
   padding: 0;
   margin: 0;
@@ -30,6 +29,7 @@
   color: #fff;
   margin-left: 1rem;
   margin-top: 3rem;
+  
   
   /* padding: 70pt; name styles well and use hyphen */
 }
@@ -91,6 +91,8 @@
 .move1{
   margin-left: .5rem;
   margin-top: .5rem; 
+  background-color: #843477;
+  width: 100%;
 }
 
 
@@ -141,8 +143,8 @@
 }
 
   .move1{
-     margin-left: 3.5rem;
-     margin-top: 4rem; 
+     /* margin-left: 3.5rem;
+     margin-top: 4rem;  */
   }
 
 
@@ -170,8 +172,8 @@
   }
 
   .move1{
-     margin-left: 3.5rem;
-  margin-top: 3.5rem; 
+     /* margin-left: 3.5rem;
+     margin-top: 3.5rem;  */
   }
 
 }

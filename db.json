@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "ata.ogechukwu@wemabank.com",
+      "password": "open123@Wema",
+      "department": "Information Technology",
+      "unit": "Automation Innovation",
+      "role": "Team Member"
+
+    },
+
+    {
+      "id": 2,
+      "email": "samuel.alli@wemabank.com",
+      "password": "awesome@Wema",
+      "department": "Information Technology",
+      "unit": "Automation Innovation",
+      "role": "Team Lead"
+
+    },
+
+    {
+      "id": 3,
+      "email": "oluwapese.alo@wemabank.com",
+      "password": "open123@Stuff",
+      "department": "Information Technology",
+      "unit": "Automation Innovation",
+      "role": "Line Manager"
+
+    }
+  ]
+}
