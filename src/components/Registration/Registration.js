@@ -23,14 +23,14 @@ const Registration = () => {
 
   return (
     <section className="reg-wrapper">
-      <img className="img-form1" alt="" src={RegForm} lazy />
+      <img className="img-form1" alt="" src={RegForm} />
 
       <div className="move">
         <p className="register-text">Register your Account</p>
         <p className="second-text">
           Fill the details below to register account
         </p>
-        <form className="central-form">
+        <form className="centralize-form">
           <div>
             <div>
               <label htmlFor="department" className="form-label1 mt-4">

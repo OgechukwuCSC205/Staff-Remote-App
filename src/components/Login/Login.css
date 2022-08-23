@@ -7,62 +7,62 @@
   color: #fff;
 } */
 
-
-
 .wrapper {
   display: flex;
   flex-direction: row;
-  height: 100vh; 
+  height: 100vh;
   padding: 0;
   margin: 0;
 }
 
-.img-form{
+.img-form {
   display: none;
 }
 
-.welcome-text, .second-paragraph {
+.welcome-text,
+.second-paragraph {
   font-family: "Aclonica";
   font-style: normal;
   font-weight: 3rem;
   font-size: 1.3rem;
   color: #fff;
-  margin-left: 1rem;
-  margin-top: 3rem;
+  margin-left: 5rem;
+  margin-top: 4rem;
   
   
+  
+
   /* padding: 70pt; name styles well and use hyphen */
 }
 
 .second-paragraph {
   font-size: 1rem;
+  margin-top: 3rem;
 }
 
-.centralize-form{
+.centralize-form1 {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-left: 1rem;
+  margin-left: 5rem;
 }
 
-.form-label{
+.form-label {
   display: block;
   color: #fff;
   font-size: 1rem;
 }
 
-.form-input{
+.form-input {
   text-indent: 2px;
   outline: none;
   width: 27rem;
   height: 2.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: 1px solid #ccc;
-
 }
 
-.form-input:focus{
+.form-input:focus {
   border: none;
 }
 /* .input {
@@ -79,24 +79,23 @@
   font-size: 14px;
 }
 
-.sign-link{
+.sign-link {
   text-decoration: underline;
   color: #ccc;
 }
 
-.sign-link:hover{
+.sign-link:hover {
   color: yellow;
 }
 
-.move1{
-  margin-left: .5rem;
-  margin-top: .5rem; 
+.move1 {
+  /* margin-left: 0.5rem;
+  margin-top: 0.5rem; */
   background-color: #843477;
   width: 100%;
 }
 
-
-.center{
+.center {
   text-align: center;
 }
 
@@ -123,69 +122,106 @@
   color: black;
 }
 
-.img2-form{
- display: none;
+.img2-form {
+  display: none;
 }
 
-@media (min-width:1000px) {
- .img-form {
-    display:block;
+/*media query */
+
+@media (min-width: 1000px) {
+  .img-form {
+    display: block;
   }
 
-  .img2-form{
- display: block;
- /* justify-content: flex-end; */
- /* margin-left: 60pt; */
- padding: 15pt;
- padding-top: 20pt;
- 
-
-}
-
-  .move1{
-     /* margin-left: 3.5rem;
-     margin-top: 4rem;  */
+  .img2-form {
+    display: block;
+    /* justify-content: flex-end; */
+    /* margin-left: 60pt; */
+    padding: 15pt;
+    padding-top: 20pt;
   }
-
-
-
+  /* .move1 {
+    /* margin-left: 3.5rem;
+     margin-top: 4rem;  
+  } */
 }
 
-@media (min-width:401px) and (max-width:600px) {
+@media (min-width: 401px) and (max-width: 600px) {
   .wrapper {
     justify-content: space-between;
     align-items: center;
   }
   .form-input {
-   width:20rem;
+    width: 20rem;
   }
 
+  .welcome-text,
+.second-paragraph {
+
+  margin-top: 3rem;
+  margin-left: 3rem;
 }
 
-@media (min-width:601px) and (max-width:999px){
+.second-paragraph {
+  margin-top: 2rem;
+}
+
+.centralize-form1{
+  margin-left: 3rem;
+}
+}
+
+@media (min-width: 601px) and (max-width: 999px) {
   .wrapper {
     justify-content: center;
     align-items: center;
   }
   .form-input {
-   width:27rem;
+    width: 27rem;
   }
 
-  .move1{
-     /* margin-left: 3.5rem;
-     margin-top: 3.5rem;  */
-  }
+  /* .move1 {
+    /* margin-left: 3.5rem;
+     margin-top: 3.5rem;  
+  } */
 
+  .welcome-text,
+.second-paragraph {
+
+  margin-top: 3rem;
+  margin-left: 3rem;
 }
 
-@media (max-width:400px) {
+.second-paragraph {
+  margin-top: 2rem;
+}
+
+.centralize-form1{
+  margin-left: 3rem;
+}
+}
+
+@media (max-width: 400px) {
   .wrapper {
     justify-content: center;
     align-items: center;
-    
   }
   .form-input {
-   width:15rem;
+    width: 15rem;
   }
 
+  .welcome-text,
+.second-paragraph {
+
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+.second-paragraph {
+  margin-top: 2rem;
+}
+
+.centralize-form1{
+  margin-left: 3rem;
+}
 }

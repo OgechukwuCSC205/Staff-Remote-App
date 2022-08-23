@@ -70,7 +70,7 @@ const Login = () => {
       <div className="move1">
         <p className="welcome-text">Welcome</p>
         <p className="second-paragraph">Login to Continue</p>
-        <form className="centralize-form">
+        <form className="centralize-form1">
           <div>
             <div>
               <label htmlFor="email" className="form-label">
