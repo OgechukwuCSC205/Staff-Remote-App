@@ -13,6 +13,7 @@
   height: 100vh;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .img-form1 {
@@ -26,7 +27,6 @@
   font-weight: 3rem;
   font-size: 1.3rem;
   color: #000000;
-  margin-left: 5rem;
   margin-top: 4rem;
 
   /* padding: 70pt; name styles well and use hyphen */
@@ -41,7 +41,8 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
+  justify-content: center;
 }
 
 .form-label1 {
@@ -53,7 +54,7 @@
 .form-input1 {
   text-indent: 2px;
   outline: none;
-  width: 25rem;
+  width: 100%;
   height: 2.5rem;
   border-radius: 0.5rem;
   border: 1px solid #ccc;
@@ -88,6 +89,9 @@
 .move {
   background-color: hsl(213, 10%, 78%);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {
@@ -124,7 +128,7 @@
 
 /*media query */
 
-@media (min-width: 1000px) {
+@media (min-width: 1201px) {
   .img-form1 {
     display: block;
   }
@@ -147,30 +151,31 @@
   .reg-wrapper {
     justify-content: space-between;
     align-items: center;
+    background-color: hsl(213, 10%, 78%);
   }
 
   .form-input1 {
-    width: 20rem;
+    width: 100%;
   }
 
   .register-text,
-.second-text {
-  margin-top: 3rem;
-  margin-left: 3rem;
+  .second-text {
+   margin: 0 auto;
+  }
+
+  .centralize-form {
+    margin-left: 3rem;
+  }
 }
 
-.centralize-form{
-  margin-left: 3rem;
-}
-}
-
-@media (min-width: 601px) and (max-width: 999px) {
+@media (min-width: 601px) and (max-width: 1200px) {
   .reg-wrapper {
     justify-content: center;
     align-items: center;
+    background-color: hsl(213, 10%, 78%);
   }
   .form-input1 {
-    width: 27rem;
+    width: 100%;
   }
 
   /* .move {
@@ -179,32 +184,31 @@
   } */
 
   .register-text,
-.second-text {
-  margin-top: 3rem;
-  margin-left: 3rem;
-}
+  .second-text {
+    margin-top: 3rem;
+  }
 
-.centralize-form{
-  margin-left: 3rem;
-}
+  .centralize-form {
+    margin-left: 3rem;
+  }
 }
 
 @media (max-width: 400px) {
   .reg-wrapper {
     justify-content: center;
     align-items: center;
+    background-color: hsl(213, 10%, 78%);
   }
   .form-input1 {
-    width: 15rem;
+    width: 100%;
   }
 
   .register-text,
-.second-text {
-  margin-top: 3rem;
-  margin-left: 3rem;
-}
+  .second-text {
+    margin-top: 3rem;
+  }
 
-.centralize-form{
-  margin-left: 3rem;
-}
+  .centralize-form {
+    margin-left: 3rem;
+  }
 }

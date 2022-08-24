@@ -10,7 +10,15 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [checkbox, setCheckbox] = useState(false);
+  const [error, setError] = useState({
+      email: false,
+      password: false,
+  });
   const navigate = useNavigate();
+
+
+  const re =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   // const data = useState("");
   // const email = data[0];
   // const setEmail = data[1];
@@ -23,8 +31,15 @@ const Login = () => {
 
   const handleSubmit = (params) => {
     params.preventDefault();
-    if(checkbox !== true || password === "" || email === "") {
-        return;
+
+    if(password === "") {
+      setError({...error,password:true});
+      return;
+    }
+
+    if(email === "" || String(email).toLowerCase().match(re)) {
+      setError({...error, email:true});
+      return;
     }
       const payload = {
         email,
@@ -68,76 +83,78 @@ const Login = () => {
       {/* <LogForm /> */}
 
       <div className="move1">
-        <p className="welcome-text">Welcome</p>
-        <p className="second-paragraph">Login to Continue</p>
-        <form className="centralize-form1">
-          <div>
-            <div>
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <input
-                type="email"
-                placeholder="Enter email"
-                required
-                maxLength={30}
-                className="form-input"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-              />
-              <label htmlFor="password" className="form-label mt-4">
-                Password
-              </label>
-              <input
-                type="password"
-                placeholder="Enter password"
-                required
-                maxLength={20}
-                className="form-input"
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              />
-
-              <div className="form-check mt-5 mb-5">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value={checkbox}
-                  id="flexCheckDefault"
-                  onClick={(e) => {
-                    setCheckbox(e.target.checked);
-                    console.log(checkbox);
-                  }}
-                />
-                <label
-                  className="form-check-label labelise"
-                  // for="flexCheckDefault"
-                >
-                  Remember me
-                </label>
-              </div>
-
+            <p className="welcome-text">Welcome</p>
+            <p className="second-paragraph">Login to Continue</p>
+            <form className="centralize-form1">
               <div>
-                <Button type="submit" size="sm" className="btn-primary mb-3" onClick  = {handleSubmit}>
-                  Login
-                </Button>
-              </div>
+                <div>
+                  <label htmlFor="email" className="form-label">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter email"
+                    required
+                    maxLength={30}
+                    className="form-input"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                  />
+                  
+                  <label htmlFor="password" className="form-label mt-4">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Enter password"
+                    // required
+                    maxLength={20}
+                    className="form-input"
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }}
+                  />
+                  {error.password && <p>Enter a valid password</p>}
 
-              <div>
-                <p className="mb-4  center">
-                  Don't have an account?{" "}
-                  <a href="./" className="sign-link">
-                    Sign up
-                  </a>
-                </p>
+                  <div className="form-check mt-5 mb-5">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value={checkbox}
+                      id="flexCheckDefault"
+                      onClick={(e) => {
+                        setCheckbox(e.target.checked);
+                        console.log(checkbox);
+                      }}
+                    />
+                    <label
+                      className="form-check-label labelise"
+                      // for="flexCheckDefault"
+                    >
+                      Remember me
+                    </label>
+                  </div>
+
+                  <div>
+                    <Button type="submit" size="sm" className="btn-primary mb-3" onClick  = {handleSubmit}>
+                      Login
+                    </Button>
+                  </div>
+
+                  <div>
+                    <p className="mb-4  center">
+                      Don't have an account?{" "}
+                      <a href="./" className="sign-link">
+                        Sign up
+                      </a>
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </form>
+            </form>
       </div>
       {/* <div className="img2-form">
         <img alt="" src={WemaForm} lazy />

@@ -28,9 +28,6 @@
   color: #fff;
   margin-left: 5rem;
   margin-top: 4rem;
-  
-  
-  
 
   /* padding: 70pt; name styles well and use hyphen */
 }
@@ -150,31 +147,33 @@
   .wrapper {
     justify-content: space-between;
     align-items: center;
+    background-color: #843477;
   }
   .form-input {
     width: 20rem;
   }
 
   .welcome-text,
-.second-paragraph {
+  .second-paragraph {
+    /* margin-top: 3rem;
+    margin-left: 3rem; */
+    margin: 0px auto;
+  }
 
-  margin-top: 3rem;
-  margin-left: 3rem;
-}
+  .second-paragraph {
+    margin-top: 2rem;
+  }
 
-.second-paragraph {
-  margin-top: 2rem;
-}
-
-.centralize-form1{
-  margin-left: 3rem;
-}
+  .centralize-form1 {
+    margin-left: 3rem;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 999px) {
   .wrapper {
     justify-content: center;
     align-items: center;
+    background-color: #843477;
   }
   .form-input {
     width: 27rem;
@@ -186,42 +185,41 @@
   } */
 
   .welcome-text,
-.second-paragraph {
+  .second-paragraph {
+    margin-top: 3rem;
+    margin-left: 3rem;
+  }
 
-  margin-top: 3rem;
-  margin-left: 3rem;
-}
+  .second-paragraph {
+    margin-top: 2rem;
+  }
 
-.second-paragraph {
-  margin-top: 2rem;
-}
-
-.centralize-form1{
-  margin-left: 3rem;
-}
+  .centralize-form1 {
+    margin-left: 3rem;
+  }
 }
 
 @media (max-width: 400px) {
   .wrapper {
     justify-content: center;
     align-items: center;
+    background-color: #843477;
   }
   .form-input {
     width: 15rem;
   }
 
   .welcome-text,
-.second-paragraph {
+  .second-paragraph {
+    margin-top: 3rem;
+    margin-left: 3rem;
+  }
 
-  margin-top: 3rem;
-  margin-left: 3rem;
-}
+  .second-paragraph {
+    margin-top: 2rem;
+  }
 
-.second-paragraph {
-  margin-top: 2rem;
-}
-
-.centralize-form1{
-  margin-left: 3rem;
-}
+  .centralize-form1 {
+    margin-left: 3rem;
+  }
 }
