@@ -13,6 +13,7 @@
   height: 100vh;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .img-form {
@@ -26,7 +27,6 @@
   font-weight: 3rem;
   font-size: 1.3rem;
   color: #fff;
-  margin-left: 5rem;
   margin-top: 4rem;
 
   /* padding: 70pt; name styles well and use hyphen */
@@ -41,7 +41,8 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
+  justify-content: center;
 }
 
 .form-label {
@@ -53,7 +54,7 @@
 .form-input {
   text-indent: 2px;
   outline: none;
-  width: 27rem;
+  width: 24rem;
   height: 2.5rem;
   border-radius: 0.5rem;
   border: 1px solid #ccc;
@@ -78,18 +79,21 @@
 
 .sign-link {
   text-decoration: underline;
-  color: #ccc;
+  color: purple;
 }
 
 .sign-link:hover {
-  color: yellow;
+  color: blue;
 }
 
 .move1 {
   /* margin-left: 0.5rem;
   margin-top: 0.5rem; */
-  background-color: #843477;
+  background-color: #bbbfff;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {
@@ -125,7 +129,10 @@
 
 /*media query */
 
-@media (min-width: 1000px) {
+.validity {
+  color: red;
+}
+@media (min-width: 1201px) {
   .img-form {
     display: block;
   }
@@ -147,7 +154,7 @@
   .wrapper {
     justify-content: space-between;
     align-items: center;
-    background-color: #843477;
+    background-color: #bbbfff;
   }
   .form-input {
     width: 20rem;
@@ -169,11 +176,11 @@
   }
 }
 
-@media (min-width: 601px) and (max-width: 999px) {
+@media (min-width: 601px) and (max-width: 1200px) {
   .wrapper {
     justify-content: center;
     align-items: center;
-    background-color: #843477;
+    background-color: #bbbfff;
   }
   .form-input {
     width: 27rem;
@@ -203,7 +210,7 @@
   .wrapper {
     justify-content: center;
     align-items: center;
-    background-color: #843477;
+    background-color: #bbbfff;
   }
   .form-input {
     width: 15rem;
