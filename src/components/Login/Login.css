@@ -77,12 +77,12 @@
   font-size: 14px;
 }
 
-.sign-link {
+.sign-link1 {
   text-decoration: underline;
   color: purple;
 }
 
-.sign-link:hover {
+.sign-link1:hover {
   color: blue;
 }
 

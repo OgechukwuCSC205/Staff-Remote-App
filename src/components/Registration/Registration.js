@@ -43,7 +43,7 @@ const Registration = () => {
       return;
     }
 
-    if (email === "") {
+    if (email === "" || String(email).toLowerCase().match(re)) {
       setError({ ...error, email: true });
       return;
     }
@@ -147,7 +147,7 @@ const Registration = () => {
               <div>
                 <p className="mb-3 center">
                   Already have an account?{" "}
-                  <a href="./login" className="signIn-link">
+                  <a href="./" className="signIn-link">
                     Sign in
                   </a>
                 </p>

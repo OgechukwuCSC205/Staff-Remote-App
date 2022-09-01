@@ -1,0 +1,17 @@
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #843477;
+  width: 8rem;
+  height: 100vh;
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.links{
+    padding-top: 62px;
+    text-decoration: none;
+    color: white;
+}

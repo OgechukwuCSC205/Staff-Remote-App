@@ -156,7 +156,7 @@ const Login = () => {
               <div>
                 <p className="mb-4  center">
                   Don't have an account?{" "}
-                  <a href="./" className="sign-link">
+                  <a href="./registration" className="sign-link1">
                     Sign up
                   </a>
                 </p>
