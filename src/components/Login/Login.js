@@ -37,7 +37,7 @@ const Login = () => {
       return;
     }
 
-    if(email === "" || String(email).toLowerCase().match(re)) {
+    if(email === "" || !String(email).toLowerCase().match(re)) {
       setError({...error, email:true});
       return;
     }
@@ -69,6 +69,7 @@ const Login = () => {
         const user = response.filter(value => value.email === email.toLowerCase() && value.password === password);
         if(user[0].email) {
           // navigate to dashboard
+          sessionStorage.setItem("user", JSON.stringify(user[0]));
           navigate("/dashboard");
 
         }

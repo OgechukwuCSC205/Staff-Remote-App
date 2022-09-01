@@ -7,9 +7,7 @@
       "department": "Information Technology",
       "unit": "Automation Innovation",
       "role": "Team Member"
-
     },
-
     {
       "id": 2,
       "email": "samuel.alli@wemabank.com",
@@ -17,9 +15,7 @@
       "department": "Information Technology",
       "unit": "Automation Innovation",
       "role": "Team Lead"
-
     },
-
     {
       "id": 3,
       "email": "oluwapese.alo@wemabank.com",
@@ -27,7 +23,6 @@
       "department": "Information Technology",
       "unit": "Automation Innovation",
       "role": "Line Manager"
-
     }
   ]
 }
