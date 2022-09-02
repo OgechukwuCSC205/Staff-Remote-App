@@ -1,6 +1,15 @@
 import "./Sidebar.css";
+import { useNavigate } from "react-router-dom";
+
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+
+  const logout = () => {
+    sessionStorage.removeItem("user");
+    navigate("/");
+  };
+
   return (
     <>
       <div className="sidenav">
@@ -8,7 +17,7 @@ const Sidebar = () => {
         <a href="/">Home</a>
         <a href="/">Tasks</a>
         <a href="/">Settings</a>
-        <a href="/">Logout</a>
+        <a href="/" onClick={logout}>Logout</a>
       </div>
     </>
   );
