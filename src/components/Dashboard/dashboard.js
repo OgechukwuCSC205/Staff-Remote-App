@@ -7,12 +7,21 @@ import "./dashboard.css";
 
 const Dashboard = () => {
   return (
-    <section>
+    <div>
+      <Sidebar />
+      
+      <div id="rightSideWrapper">
+
+        {/* <header>Header</header> */}
       <Header />
-      <Sidebar   />
-      <Outlet>
-      </Outlet>
-    </section>
+        <div className="ContentBox">
+          <main>
+            <Outlet>
+            </Outlet>
+          </main>
+        </div>
+    </div>
+    </div>
   );
 };
 
