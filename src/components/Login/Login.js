@@ -136,7 +136,7 @@ const Login = () => {
                   }}
                 />
                 <label
-                  className="form-check-label labelise"
+                  className="form-check-label form-label labelise"
                   // for="flexCheckDefault"
                 >
                   Remember me

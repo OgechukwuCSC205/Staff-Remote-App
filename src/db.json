@@ -8,6 +8,7 @@
       "unit": "Automation Innovation",
       "role": "Team Member"
     },
+
     {
       "id": 2,
       "email": "samuel.alli@wemabank.com",
@@ -16,6 +17,7 @@
       "unit": "Automation Innovation",
       "role": "Team Lead"
     },
+
     {
       "id": 3,
       "email": "oluwapese.alo@wemabank.com",
@@ -23,6 +25,32 @@
       "department": "Information Technology",
       "unit": "Automation Innovation",
       "role": "Line Manager"
+    }
+  ],
+
+  "tasks": [
+    {
+      "name": "Ata Ogechukwu",
+      "role": "Intern",
+      "approval_status": "Approved"
+    },
+
+    {
+      "name": "Alli Samuel",
+      "role": "Senior Software Developer",
+      "approval_status": "Pending"
+    },
+
+    {
+      "name": "Alo Oluwapese",
+      "role": "Intern",
+      "approval_status": "Approved"
+    },
+
+    {
+      "name": "Olosunde Kehinde",
+      "role": "Team Lead",
+      "approval_status": "Pending"
     }
   ]
 }

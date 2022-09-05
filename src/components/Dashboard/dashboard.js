@@ -10,8 +10,12 @@ const Dashboard = () => {
     <section>
       <Header />
       <Sidebar   />
-      <Outlet>
-      </Outlet>
+       <Outlet>
+        {/* <Link to="/dashboard/tasks">Tasks</Link> */}
+
+      </Outlet>  
+
+
     </section>
   );
 };
