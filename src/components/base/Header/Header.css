@@ -9,6 +9,8 @@ body {
   /* position: fixed; */
   width: 100%;
   height: 70px;
+  position: sticky; 
+  top: 0;
   /* z-index: 2; */
 }
 
@@ -93,7 +95,7 @@ body {
 .icon3{
     margin-bottom: 0.5rem;
 }
-.sidenav a {
+/* .sidenav a {
   padding: 30px 0px 23px 0px;
   text-decoration: none;
   font-size: 25px;
@@ -105,7 +107,7 @@ body {
 .sidenav a:hover {
   color: #843477;
   background-color: #d9d9d9;
-}
+} */
 
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */

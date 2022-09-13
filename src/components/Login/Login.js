@@ -120,9 +120,7 @@ const Login = () => {
                   setPassword(e.target.value);
                 }}
               />
-              {error.password && (
-                <p className="validity">Enter a valid password</p>
-              )}
+               
 
               <div className="form-check mt-5 mb-5">
                 <input

@@ -6,7 +6,8 @@ import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
 import Dashboard from "./components/Dashboard/dashboard";
 import Tasks from "./components/base-links/tasks/tasks.js";
-
+import Request from "./components/base-links/requests/requests";
+import Settings from "./components/base-links/settings/settings";
 
 
 
@@ -18,10 +19,12 @@ const App = () => {
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="" element={<Home />} />
-          {/* <Route path="/tasks" element={<Tasks />} /> */}
+          <Route path="/dashboard/tasks" element={<Tasks />} />
+          <Route path="/dashboard/requests" element={<Request />} />
+          <Route path="/dashboard/settings" element={<Settings />} />{" "}
         </Route>
-        <Route path="/dashboard/tasks" element={<Tasks />} />
-        <Route path="/dashboard/request" element={<Tasks />} />
+
+        {/* <Route path="/dashboard/request" element={<Tasks />} /> */}
       </Routes>
     </>
   );

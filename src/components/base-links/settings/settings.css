@@ -1,4 +1,4 @@
-.req-text {
+.set-text {
   display: flex;
   font-size: 1.7rem;
   font-weight: 500;
@@ -16,12 +16,13 @@
   width: 35rem;
   height: 2.5rem;
   border-radius: 5px;
+  
 }
 
-.form-height {
-  height: 7rem;
-  vertical-align: text-top;
-  border: 0.2px solid lightgrey;
+.form-height1 {
+    vertical-align: text-top;
+    border: 0.2px solid lightgrey;
+
 }
 
 .req-btn {
@@ -36,6 +37,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.main-div {
+.main-div-set {
   margin-left: 3rem;
 }
