@@ -1,3 +1,4 @@
+import { flexbox } from "@mui/system";
 import { useEffect, useState } from "react";
 import { getTasks } from "../../../services/utility";
 // import TableData from "../../../db.json/tasks";
@@ -21,7 +22,13 @@ const Tasks = () => {
 
   return (
     <div>
-      <div className="task-text">Tasks</div>
+      <div >
+        <p className="task-text">Tasks</p>
+        <hr
+          style={{ height: "3px", width: "10px", backgroundColor: "#ff1000" }}
+        />
+      </div>
+
       <div className="">
         <input
           type="text"
