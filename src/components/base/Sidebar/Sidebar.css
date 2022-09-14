@@ -110,8 +110,8 @@ body {
   cursor: pointer;
 }
 
-.sidenav a .is-active{
-  color: #843477;
+.is-active{
+  color: #000;
   background-color: #d9d9d9;
 }
 

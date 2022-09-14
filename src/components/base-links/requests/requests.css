@@ -10,19 +10,16 @@
   font-size: 1.1rem;
 }
 
-.form-inputs {
+.form-inputs1 {
   text-indent: 2px;
   outline: none;
   width: 35rem;
-  height: 2.5rem;
+  height: 9rem;
   border-radius: 5px;
-}
-
-.form-height {
-  height: 7rem;
-  vertical-align: text-top;
   border: 0.2px solid lightgrey;
 }
+
+
 
 .req-btn {
   width: 35rem;
@@ -37,5 +34,5 @@
 }
 
 .main-div {
-  margin-left: 3rem;
+  /* margin-left: 3rem; */
 }

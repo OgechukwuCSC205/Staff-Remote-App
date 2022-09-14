@@ -16,10 +16,10 @@
   /* text-decoration: underline solid 0.1rem; */
 }
 
-.task-p:hover{
-    text-decoration: underline solid #ff1000 0.1rem;
-    /* color: #843477; */
-    transition: 0.4ms;
+.task-p:hover {
+  text-decoration: underline solid #ff1000 0.1rem;
+  /* color: #843477; */
+  transition: 0.4ms;
 }
 
 .pending {
@@ -49,18 +49,17 @@
 }
 
 .table-icon {
-    font-size: large;
-    cursor: pointer;
-
+  font-size: large;
+  cursor: pointer;
 }
 
 .table-icon:hover {
-    color: #ff1000;
-    transition: 0.4ms;
+  color: #ff1000;
+  transition: 0.4ms;
 }
 
 .icon-style {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .colored {

@@ -93,12 +93,12 @@ const Request = () => {
               <label htmlFor="text" className="form-labels mt-4">
                 Request Note
               </label>
-              <input
+              <textarea
                 type="text"
                 placeholder="Write request"
                 // required
                 maxLength={20}
-                className="form-inputs form-height"
+                className="form-inputs1 form-height"
               />
 
               <div className="">
