@@ -120,9 +120,7 @@ const Login = () => {
                   setPassword(e.target.value);
                 }}
               />
-              {error.password && (
-                <p className="validity">Enter a valid password</p>
-              )}
+               
 
               <div className="form-check mt-5 mb-5">
                 <input
@@ -136,7 +134,7 @@ const Login = () => {
                   }}
                 />
                 <label
-                  className="form-check-label labelise"
+                  className="form-check-label form-label labelise"
                   // for="flexCheckDefault"
                 >
                   Remember me

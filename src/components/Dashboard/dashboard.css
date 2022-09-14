@@ -53,7 +53,8 @@ header {
 }
 
 .ContentBox {
-  /* margin-top: 100px; */
+  margin-top: 15px;
+  margin-left: 20px;
   /*The height of the   header*/
   display: flex;
   flex-flow: row wrap;
@@ -65,7 +66,7 @@ footer {
   /*Aesthetics*/
   /* background: lightgray; */
   border-radius: 7px;
-  margin: 10px;
+  margin-left: 10px;
   padding: 20px;
 }
 

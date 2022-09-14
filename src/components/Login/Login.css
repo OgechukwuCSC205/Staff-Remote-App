@@ -26,7 +26,7 @@
   font-style: normal;
   font-weight: 3rem;
   font-size: 1.3rem;
-  color: #fff;
+  color: #000;
   margin-top: 4rem;
 
   /* padding: 70pt; name styles well and use hyphen */
@@ -47,7 +47,7 @@
 
 .form-label {
   display: block;
-  color: #fff;
+  color: #000;
   font-size: 1rem;
 }
 

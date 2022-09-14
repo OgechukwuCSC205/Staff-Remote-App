@@ -1,0 +1,42 @@
+.set-text {
+  display: flex;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.form-labels {
+  display: block;
+  color: #000;
+  font-size: 1.1rem;
+}
+
+.form-inputs {
+  text-indent: 2px;
+  outline: none;
+  width: 35rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  
+}
+
+.form-height1 {
+    vertical-align: text-top;
+    border: 0.2px solid lightgrey;
+
+}
+
+.req-btn {
+  width: 35rem;
+  background-color: #843477;
+  justify-content: center;
+  margin-top: 1.2rem;
+  /* margin-left: 10rem; */
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-div-set {
+  margin-left: 3rem;
+}
