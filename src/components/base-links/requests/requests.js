@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import "./requests.css";
-import Select from "react-select";
+// import Select from "react-select";
 
 const Request = () => {
   // const [department, setDepartment] = useState("");
@@ -65,14 +65,14 @@ const Request = () => {
                 Days in the Office
               </label>
 
-              <Select
+              {/* <Select
                 options={days}
                 placeholder="Select Day"
                 value={oDay}
                 className="form-inputs"
                 onChange={handleSelect}
                 isMulti
-              />
+              /> */}
               {/* {officeDays.map((value, index) => (
                   <option key={index}>{value}</option>
                 ))} */}
@@ -81,14 +81,14 @@ const Request = () => {
                 Days working from home
               </label>
 
-              <Select
+              {/* <Select
                 options={days}
                 placeholder="Select Day"
                 value={rDay}
                 className="form-inputs"
                 onChange={handleSelect1}
                 isMulti
-              />
+              /> */}
 
               <label htmlFor="text" className="form-labels mt-4">
                 Request Note
