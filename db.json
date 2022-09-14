@@ -1,0 +1,77 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "ata.ogechukwu@wemabank.com",
+      "password": "open123@Wema",
+      "department": "Information Technology",
+      "unit": "Automation Innovation",
+      "role": "Team Member"
+    },
+
+    {
+      "id": 2,
+      "email": "samuel.alli@wemabank.com",
+      "password": "awesome@Wema",
+      "department": "Information Technology",
+      "unit": "Automation Innovation",
+      "role": "Team Lead"
+    },
+
+    {
+      "id": 3,
+      "email": "oluwapese.alo@wemabank.com",
+      "password": "open123@Stuff",
+      "department": "Information Technology",
+      "unit": "Automation Innovation",
+      "role": "Line Manager"
+    }
+  ],
+
+  "tasks": [
+    {
+      "name": "Ata Ogechukwu",
+      "unit": "Automation Innovation",
+      "email": "ata.ogechukwu@wemabank.com",
+      "role": "Intern",
+      "approval_status": "Approved",
+      "date": "23-09-2018"
+    },
+
+    {
+      "name": "Alli Samuel",
+      "unit": "Core Development",
+      "email": "samuel.alli@wemabank.com",
+      "role": "Senior Software Developer",
+      "approval_status": "Pending",
+      "date": "23-09-2018"
+    },
+
+    {
+      "name": "Alo Oluwapese",
+      "unit": "Core Development",
+      "email": "oluwapese.alo@wemabank.com",
+      "role": "Intern",
+      "approval_status": "Approved",
+      "date": "14-10-2018"
+    },
+
+    {
+      "name": "Olosunde Kehinde",
+      "unit": "Core Development",
+      "email": "olosunde.kehinde@wemabank.com",
+      "role": "Team Lead",
+      "approval_status": "Pending",
+      "date": "15-10-2020"
+    },
+
+    {
+      "name": "Kenny Balogun",
+      "unit": "Windows",
+      "email": "kenny.balogun@wemabank.com",
+      "role": "Junior Software Tester",
+      "approval_status": "Approved",
+      "date": "15-10-2022"
+    }
+  ]
+}

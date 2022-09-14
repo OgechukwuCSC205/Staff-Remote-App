@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import "./settings.css";
-import Select from "react-select";
+// import Select from "react-select";
 
 const Settings = () => { 
   
@@ -28,7 +28,7 @@ const Settings = () => {
 //   { value: "friday", label: "Friday" },
 // ];
 
-const [fDept, setFdept] = useState();
+const [fDept, setFdept] = useState(); //rename properly
 const [nDept, setNdept] = useState();
 const [nUnit, setNunit] = useState();
 const [error, setError] = useState({
@@ -93,14 +93,14 @@ return (
               Current Department
             </label>
 
-            <Select
+            {/* <Select
               options={depts}
               placeholder="Select Department"
               value={fDept}
               className="form-inputs"
               onChange={handleSelect}
               isMulti
-            />
+            /> */}
             {/* {officeDays.map((value, index) => (
                   <option key={index}>{value}</option>
                 ))} */}
@@ -109,27 +109,27 @@ return (
               New Department
             </label>
 
-            <Select
+            {/* <Select
               options={depts}
               placeholder="Select Department"
               value={nDept}
               className="form-inputs"
               onChange={handleSelect1}
               isMulti
-            />
+            /> */}
 
             <label htmlFor="remoteDays" className="form-labels mt-4">
               Unit
             </label>
 
-            <Select
+            {/* <Select
               options={units}
               placeholder="Select Unit"
               value={nUnit}
               className="form-inputs"
               onChange={handleSelect2}
               isMulti
-            />
+            /> */}
 
             <div className="">
               <Button
