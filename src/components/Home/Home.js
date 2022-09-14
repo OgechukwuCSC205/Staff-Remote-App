@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "chart.js/auto";
-import { Circle } from "react-shapes";
+// import { Circle } from "react-shapes";
 import { Doughnut } from "react-chartjs-2";
 import "./Home.css";
 
