@@ -12,6 +12,11 @@ const Sidebar = () => {
     navigate("/");
   };
 
+  const reload = () =>
+  {
+    if (sessionStorage.getItem("is_reloaded")) alert("Reloaded!");
+  }
+
   // const [isActive, setIsActive] = useState(false);
 
   // const handleClick = () => {
@@ -45,7 +50,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="sidenav">
-        <i className="fa fa-bars iconic icon3" aria-hidden="true"></i>
+        <i className="fa fa-bars iconic1 icon4" aria-hidden="true"></i>
         <NavLink
           // className="navbar-item"
           to="/dashboard"

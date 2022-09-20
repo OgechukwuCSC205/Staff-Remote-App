@@ -35,7 +35,10 @@
       "email": "ata.ogechukwu@wemabank.com",
       "role": "Intern",
       "approval_status": "Approved",
-      "date": "23-09-2018"
+      "date": "23-09-2018",
+      "request": "Good day sir, I would love to request for a change in my remote days due to the conflict of traffic",
+      "officeDay": "Tuesday, Wednesday, Friday",
+      "remoteDay": "Monday, Thursday"
     },
 
     {
@@ -44,7 +47,10 @@
       "email": "samuel.alli@wemabank.com",
       "role": "Senior Software Developer",
       "approval_status": "Pending",
-      "date": "23-09-2018"
+      "date": "23-09-2018",
+      "request": "Good day sir, I would love to request for ask for days to attend a burial",
+      "officeDay": "Tuesday, Wednesday, Friday",
+      "remoteDay": "Monday, Thursday"
     },
 
     {
@@ -53,7 +59,10 @@
       "email": "oluwapese.alo@wemabank.com",
       "role": "Intern",
       "approval_status": "Approved",
-      "date": "14-10-2018"
+      "date": "14-10-2018",
+      "request": "Good day sir, I would love to request for a change in my remote days due to the conflict of traffic",
+      "officeDay": "Tuesday, Wednesday, Friday",
+      "remoteDay": "Monday, Thursday"
     },
 
     {
@@ -62,7 +71,10 @@
       "email": "olosunde.kehinde@wemabank.com",
       "role": "Team Lead",
       "approval_status": "Pending",
-      "date": "15-10-2020"
+      "date": "15-10-2020",
+      "request": "Good day sir, I would love to request for ask for days to attend a burial",
+      "officeDay": "Tuesday, Wednesday, Friday",
+      "remoteDay": "Monday, Thursday"
     },
 
     {
@@ -71,7 +83,10 @@
       "email": "kenny.balogun@wemabank.com",
       "role": "Junior Software Tester",
       "approval_status": "Approved",
-      "date": "15-10-2022"
+      "date": "15-10-2022",
+      "request": "Good day sir, I would love to request for a change in my remote days due to the conflict of traffic",
+      "officeDay": "Tuesday, Wednesday, Friday",
+      "remoteDay": "Monday, Thursday"
     }
   ]
 }

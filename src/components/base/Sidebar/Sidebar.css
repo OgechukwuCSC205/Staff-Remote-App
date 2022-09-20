@@ -16,17 +16,17 @@ body {
   color: #ffffff;
   font-weight: 400;
   display: inline-block;
-   
-   margin-right: auto;
+
+  margin-right: auto;
 }
 .fa-icon {
-    display: inline-block;
-    margin-left: auto;
-    text-align: start;
+  display: inline-block;
+  margin-left: auto;
+  text-align: start;
 }
-.class-div{
-    display: inline-block;
-    text-align: end;
+.class-div {
+  display: inline-block;
+  text-align: end;
 }
 .fa-div {
   text-align: end;
@@ -35,23 +35,23 @@ body {
 }
 
 .fa-div1 {
-    margin-right: auto;
+  margin-right: auto;
   /* padding-top: 1rem; */
   /* padding-right: 2rem; */
 }
 
-.icon3{
-    text-align: left;
+.icon3 {
+  text-align: left;
 }
 
-.iconic {
+.iconic1 {
   color: #ffffff;
   font-size: xx-large;
   margin-left: 1rem;
 }
 
-.iconic:hover{
-    cursor: pointer;
+.iconic1:hover {
+  cursor: pointer;
 }
 
 .topnav a {
@@ -92,8 +92,8 @@ body {
   padding: 20px; */
 }
 
-.icon3{
-    margin-bottom: 0.5rem;
+.icon4 {
+  margin-bottom: 0.5rem;
 }
 .sidenav a {
   padding: 23px 0px 20px 0px;
@@ -104,13 +104,13 @@ body {
   display: block;
 }
 
-.sidenav a:hover{
+.sidenav a:hover {
   color: #843477;
   background-color: #d9d9d9;
   cursor: pointer;
 }
 
-.is-active{
+.is-active {
   color: #000;
   background-color: #d9d9d9;
 }
@@ -130,15 +130,19 @@ body {
   padding: 0px 10px;
 }
 
-.date-first{
-    text-align: end;
-    color: black;
-    /* height: auto; */
+.date-first {
+  text-align: end;
+  color: black;
+  /* height: auto; */
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 600px) {

@@ -4,6 +4,9 @@
   margin-bottom: 1rem;
 }
 
+.first-div-task {
+  margin-left: 1.5rem;
+}
 .task-div {
   /* margin-top: 1rem; */
   margin-left: 16rem;
@@ -46,6 +49,7 @@
 
 .tables {
   border-bottom: 0.5px solid lightgrey;
+  display: inline;
 }
 
 .table-icon {
@@ -77,4 +81,8 @@
 
 .tbody {
   font-size: 15px;
+}
+
+.request-popup{
+  display: none;
 }
