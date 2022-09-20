@@ -1,47 +1,46 @@
 .task-text {
   font-size: 1.8rem;
-  text-decoration: underline solid #ff1000 1rem;
   margin-bottom: 1rem;
 }
-
-.task-div {
-  /* margin-top: 1rem; */
-  margin-left: 16rem;
-  display: inline;
+.task-text::after{
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 0.5rem;
+  background-color: #ff1000;
 }
-
-.task-p {
-  display: inline;
-  cursor: pointer;
-  /* text-decoration: underline solid 0.1rem; */
+.task-search{
+  display: flex;
+  justify-content: space-between;
 }
-
-.task-p:hover {
-  text-decoration: underline solid #ff1000 0.1rem;
-  /* color: #843477; */
-  transition: 0.4ms;
+.icon{
+  width: 3rem;
+    height: 2.5rem;
+  background-color: #843477;
+  color: #fff;
+  border: none;
 }
-
-.pending {
-  margin-left: 30px;
-}
-.top-box {
-  height: 8rem;
-  border: 0.5px solid lightslategray;
-  border-radius: 15px;
-  margin-bottom: 2rem;
-  background-color: lightgray;
-}
-
 .form-input4 {
   text-indent: 2px;
   outline: none;
-  width: 40rem;
+  width: 20rem;
+  height: 2.5rem;
+  border: 0.2px solid lightgrey;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.task-select{
+  margin-left: 1rem;
+  margin-top: 1rem;
+  width: 10rem;
   height: 2.5rem;
   border: 0.2px solid lightgrey;
   border-radius: 5px;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
+  outline: none;
+  font-size: 16px;
+  padding: .5em;
+  cursor: pointer;
 }
 
 .tables {

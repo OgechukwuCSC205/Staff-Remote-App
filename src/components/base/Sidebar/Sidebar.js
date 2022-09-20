@@ -5,12 +5,14 @@ import "./Sidebar.css";
 const Sidebar = () => {
   const navigate = useNavigate();
 
-  const [links, setLinks] = useState(0);
+  const [links, setLinks] = useState();
 
   const logout = () => {
     sessionStorage.removeItem("user");
     navigate("/");
   };
+
+  console.log(window.location)
 
   // const [isActive, setIsActive] = useState(false);
 
@@ -50,7 +52,11 @@ const Sidebar = () => {
           // className="navbar-item"
           to="/dashboard"
           onClick={() => setLinks(0)}
-          className={links === 0 ? "is-active" : null}
+          className={
+            links === 0 || window.location.pathname === "/dashboard"
+              ? "is-active"
+              : null
+          }
           // isActive
           //   ? {
           //       color: "#fff",
@@ -64,20 +70,32 @@ const Sidebar = () => {
         <NavLink
           to="/dashboard/tasks"
           onClick={() => setLinks(1)}
-          className={links === 1 ? "is-active" : null}
+          className={
+            links === 1 || window.location.pathname === "/dashboard/tasks"
+              ? "is-active"
+              : null
+          }
         >
           Tasks
         </NavLink>
         <NavLink
           to="/dashboard/requests"
           onClick={() => setLinks(2)}
-          className={links === 2 ? "is-active" : null}
+          className={
+            links === 2 || window.location.pathname === "/dashboard/request"
+              ? "is-active"
+              : null
+          }
         >
           Request
         </NavLink>
         <NavLink
           onClick={() => setLinks(3)}
-          className={links === 3 ? "is-active" : null}
+          className={
+            links === 3 || window.location.pathname === "/dashboard/settings"
+              ? "is-active"
+              : null
+          }
           to="/dashboard/settings"
         >
           Settings

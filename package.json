@@ -19,12 +19,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
-    "react-shapes": "^0.1.0",
-=======
     "react-select": "^5.4.0",
     "react-table": "^7.8.0",
->>>>>>> b44f7ed1776d131986e1f3664d8373cd11c9d7f8
     "web-vitals": "^2.1.4"
   },
   "scripts": {

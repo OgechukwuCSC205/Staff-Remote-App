@@ -5,6 +5,7 @@ import "./tasks.css";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState([]);
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     getTasks()
@@ -12,6 +13,7 @@ const Tasks = () => {
       .then((response) => setTasks(response));
   }, []);
 
+  const taskSelect = ["All Tasks", "Approved", "Pending"];
 
   // function approved () {
   //   if (info.approval_status === "Approved") {
@@ -22,18 +24,35 @@ const Tasks = () => {
   return (
     <div>
       <div className="task-text">Tasks</div>
-      <div className="">
-        <input
-          type="text"
-          name="search"
-          id="search-bar"
-          placeholder="Search"
-          className="form-input4"
-        />
+      <div className="task-search">
+        <div className="search-bar">
+          <input
+            type="text"
+            name="search"
+            id="search-bar"
+            placeholder="Search"
+            className="form-input4"
+          />
+          <button className="icon">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
         <div className="task-div">
-          <p className="task-p">All Tasks</p>
-          <p className="task-p pending">Approved</p>
-          <p className="task-p pending">Pending</p>
+          <select
+            name="task"
+            id="task"
+            className="task-select"
+            value={status}
+            onChange={(e) => {
+              setStatus(e.target.value);
+            }}
+          >
+            {taskSelect.map((value, index) => (
+              <option key={index} value={value}>
+                {value}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
       <table className="table tables">

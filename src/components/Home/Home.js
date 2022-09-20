@@ -1,9 +1,9 @@
-import Card from "react-bootstrap/Card";
+//import Card from "react-bootstrap/Card";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "chart.js/auto";
-import { Circle } from "react-shapes";
+// import { Circle } from "react-shapes";
 import { Doughnut } from "react-chartjs-2";
 import "./Home.css";
 
@@ -43,38 +43,22 @@ export const Home = () => {
       </div>
       <div className="wrapper">
         <div className="card-container">
-          <Card
-            className="card"
-            style={{ width: "541px", height: "326px", background: "#FFFFDD" }}
-          >
-            <Card.Body>
-              {/* <Card.Title>Today you're working:</Card.Title>
-              <Card.Subtitle>From Home</Card.Subtitle> */}
-              <Card.Text>
-                <p className="card-text">Today you're working:</p>
-                <span className="card-desc">From Home</span>
-              </Card.Text>
-            </Card.Body>
-            <div className="doughnut">
-              <Doughnut data={state} options={options} />
+          <p className="card-text">Today you're working:</p>
+          <span className="card-desc">From Home</span>
+          <div className="doughnut">
+            <Doughnut data={state} options={options} />
+          </div>
+          <div className="legend-container">
+            <div className="legend-wrap">
+              <div className="legend__from-home"></div>
+              <span className="from-home">From Home</span>
             </div>
-            <div className="circle-container">
-              <div className="illustration">
-                <Circle
-                  r={12}
-                  fill={{ color: "#843477" }}
-                  // stroke={{ color: "#E65243" }}
-                  // strokeWidth={3}
-                />
-                <span className="from-home">From Home</span>
-              </div>
-              <br />
-              <div className="illustration">
-                <Circle r={12} fill={{ color: "#9A7B6C" }} />
-                <span className="the-office">In The Office</span>
-              </div>
+            <br />
+            <div className="legend-wrap">
+              <div className="legend__the-office"></div>
+              <span className="the-office">In The Office</span>
             </div>
-          </Card>
+          </div>
           <br />
           <div className="link__view-history">
             <a className="link__view-history" href="/">
@@ -91,25 +75,23 @@ export const Home = () => {
           </div>
         </div>
         <div className="calender-container">
-          {/* <p>Calender</p> */}
-          <Calendar onChange={onChange} value={value} className="react-calender" />
+          <Calendar
+            onChange={onChange}
+            value={value}
+            className="react-calender"
+          />
           <br />
-          <div className="circle-container">
-            <div className="illustration">
-              <Circle
-                r={12}
-                fill={{ color: "#843477" }}
-                // stroke={{ color: "#E65243" }}
-                // strokeWidth={3}
-              />
+          {/* <div className="legend-container">
+            <div className="legend-wrap">
+              <div className="legend__from-home"></div>
               <span className="from-home">From Home</span>
             </div>
             <br />
-            <div className="illustration">
-              <Circle r={12} fill={{ color: "#9A7B6C" }} />
+            <div className="legend-wrap">
+              <div className="legend__the-office"></div>
               <span className="the-office">In The Office</span>
             </div>
-          </div>
+          </div> */}
         </div>{" "}
       </div>
     </>
