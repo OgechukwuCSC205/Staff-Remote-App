@@ -1,9 +1,7 @@
-//import Card from "react-bootstrap/Card";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "chart.js/auto";
-// import { Circle } from "react-shapes";
 import { Doughnut } from "react-chartjs-2";
 import "./Home.css";
 
@@ -35,6 +33,8 @@ export const Home = () => {
       }
     }
   };
+
+  
 
   return (
     <>
@@ -80,20 +80,8 @@ export const Home = () => {
             value={value}
             className="react-calender"
           />
-          <br />
-          {/* <div className="legend-container">
-            <div className="legend-wrap">
-              <div className="legend__from-home"></div>
-              <span className="from-home">From Home</span>
-            </div>
-            <br />
-            <div className="legend-wrap">
-              <div className="legend__the-office"></div>
-              <span className="the-office">In The Office</span>
-            </div>
-          </div> */}
+          </div>
         </div>{" "}
-      </div>
     </>
   );
 };
