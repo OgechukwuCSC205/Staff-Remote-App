@@ -2,27 +2,79 @@
   display: flex;
   font-size: 1.7rem;
   font-weight: 500;
+  margin-bottom: none;
+  margin-left: 1.5rem;
 }
 
+.underline-style {
+  /* border-bottom-width: 0.9rem; */
+}
+
+.underline-style::after {
+  content: "";
+  display: block;
+  width: 7rem;
+  padding-top: 3px;
+  border-bottom: 0.9rem solid #ff1000;
+}
+hr {
+  margin: 0;
+  width: 4rem;
+  height: 5px;
+  background-color: #ff1000;
+  border: none;
+  color: #ff1000;
+}
 .form-labels {
   display: block;
   color: #000;
   font-size: 1.1rem;
+  padding-bottom: 4px;
+}
+
+label {
+  margin-left: 1.5rem;
 }
 
 .form-inputs1 {
   text-indent: 2px;
   outline: none;
-  width: 35rem;
+  width: 36.5rem;
   height: 9rem;
   border-radius: 5px;
-  border: 0.2px solid lightgrey;
+  border: 0.2px solid lightslategrey;
+  margin-left: 1.5rem;
 }
 
+.checkbox-style {
+  /* width: 3rem;
+  height: 3rem; */
+  cursor: pointer;
+  display: inline;
+  border: 1px solid lightslategray;
+  border-radius: 6px;
+  padding: 8px;
+}
 
+.checkbox-style-left {
+  margin-left: 1.5rem;
+}
+
+/* div > span:first-child{
+  margin-left: none;
+} */
+
+.checkbox-style:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  margin-right: 3px;
+}
 
 .req-btn {
-  width: 35rem;
+  width: 36.5rem;
   background-color: #843477;
   justify-content: center;
   margin-top: 1.2rem;
@@ -31,6 +83,7 @@
   font-size: 1rem;
   font-weight: normal;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 1.5rem;
 }
 
 .main-div {

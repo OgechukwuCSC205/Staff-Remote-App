@@ -6,13 +6,7 @@ import "./requests.css";
 const Request = () => {
   // const [department, setDepartment] = useState("");
 
-  const days = [
-    { value: "monday", label: "Monday" },
-    { value: "tuesday", label: "Tuesday" },
-    { value: "wednesday", label: "Wednesday" },
-    { value: "thursday", label: "Thursday" },
-    { value: "friday", label: "Friday" },
-  ];
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
   // const officeDays = [
   //   { value: "monday", label: "Monday" },
@@ -29,8 +23,8 @@ const Request = () => {
     oDay: false,
   });
 
-  function handleSelect(data) {
-    setOday(data);
+  function checkFunction() {
+    // document.getElementById("accept").checked = true;
   }
 
   function handleSelect1(data) {
@@ -52,20 +46,39 @@ const Request = () => {
   }
 
   return (
-    <section className="req-wrapper">
-      <div className="">
-        <form className="centralize-form-req">
-          <div>
-            <div className="main-div">
-              <div>
-                <p className="req-text">Make Request</p>
-              </div>
+    <div className="">
+      <div className="centralize-form-req">
+        <div>
+          <div className="main-div">
+            <p className="req-text">
+              <span className="underline-style">Make Request</span>
+              {/* Make Request */}
+            </p>
+            {/* <hr /> */}
 
-              <label htmlFor="officeDays" className="form-labels mt-4">
+            <div className="mb-5">
+              <label htmlFor="officeDays" className="form-labels mt-4 mb-1">
                 Days in the Office
               </label>
+              {/* //map through here when you understand algorthm */}
+              {days.map((value, index) => (
+                <span
+                  className="checkbox-style checkbox-style-left"
+                  onClick={checkFunction}
+                >
+                  <input
+                    type="checkbox"
+                    className="checkbox-input"
+                    value="yes"
+                    id="accept"
+                    onClick={checkFunction}
+                  />
+                  {value}
+                </span>
+              ))}
+            </div>
 
-              {/* <Select
+            {/* <Select
                 options={days}
                 placeholder="Select Day"
                 value={oDay}
@@ -73,15 +86,32 @@ const Request = () => {
                 onChange={handleSelect}
                 isMulti
               /> */}
-              {/* {officeDays.map((value, index) => (
+            {/* {officeDays.map((value, index) => (
                   <option key={index}>{value}</option>
                 ))} */}
-
-              <label htmlFor="remoteDays" className="form-labels mt-4">
+            <div className="mb-5">
+              <label htmlFor="remoteDays" className="form-labels mt-4 mb-1">
                 Days working from home
               </label>
 
-              {/* <Select
+              {days.map((value, index) => (
+                <span
+                  className="checkbox-style checkbox-style-left"
+                  onClick={checkFunction}
+                >
+                  <input
+                    type="checkbox"
+                    className="checkbox-input"
+                    value="yes"
+                    id="accept"
+                    onClick={checkFunction}
+                  />
+                  {value}
+                </span>
+              ))}
+            </div>
+
+            {/* <Select
                 options={days}
                 placeholder="Select Day"
                 value={rDay}
@@ -90,35 +120,34 @@ const Request = () => {
                 isMulti
               /> */}
 
-              <label htmlFor="text" className="form-labels mt-4">
-                Request Note
-              </label>
-              <textarea
-                type="text"
-                placeholder="Write request"
-                // required
-                maxLength={20}
-                className="form-inputs1 form-height"
-              />
+            <label htmlFor="text" className="form-labels mt-4">
+              Request Note
+            </label>
+            <textarea
+              type="text"
+              placeholder="Write request"
+              // required
+              maxLength={1000}
+              className="form-inputs1 form-height"
+            />
 
-              <div className="">
-                <Button
-                  type="submit"
-                  // size="sm"
-                  className="req-btn"
-                  onClick={handleSubmit11}
-                >
-                  Submit
-                </Button>
-                {(error.rDay || error.oDay) && (
-                  <p className="validity">Enter a valid password</p>
-                )}
-              </div>
+            <div className="">
+              <Button
+                type="submit"
+                // size="sm"
+                className="req-btn"
+                onClick={handleSubmit11}
+              >
+                Submit
+              </Button>
+              {(error.rDay || error.oDay) && (
+                <p className="validity">Enter a valid password</p>
+              )}
             </div>
           </div>
-        </form>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -2,6 +2,7 @@
   display: flex;
   font-size: 1.7rem;
   font-weight: 500;
+  margin-left: 1.5rem;
 }
 
 .form-labels {
@@ -16,20 +17,20 @@
   width: 35rem;
   height: 2.5rem;
   border-radius: 5px;
-  
+  margin-left: 1.5rem;
 }
 
 .form-height1 {
-    vertical-align: text-top;
-    border: 0.2px solid lightgrey;
-
+  vertical-align: text-top;
+  border: 0.2px solid lightgrey;
 }
 
-.req-btn {
+.set-btn {
   width: 35rem;
   background-color: #843477;
   justify-content: center;
   margin-top: 1.2rem;
+  margin-left: 1.5rem;
   /* margin-left: 10rem; */
   border-radius: 5px;
   font-size: 1rem;
@@ -37,6 +38,11 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.underline-style-settings {
+  border-bottom: 0.9rem solid #ff1000;
+  line-height: 2rem;
+}
+
 .main-div-set {
-  margin-left: 3rem;
+  /* margin-left: 3rem; */
 }

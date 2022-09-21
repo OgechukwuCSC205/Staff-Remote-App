@@ -45,6 +45,7 @@
 
 .tables {
   border-bottom: 0.5px solid lightgrey;
+  display: inline;
 }
 
 .table-icon {
@@ -76,4 +77,8 @@
 
 .tbody {
   font-size: 15px;
+}
+
+.request-popup{
+  display: none;
 }
