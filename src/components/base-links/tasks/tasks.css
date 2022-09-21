@@ -45,7 +45,8 @@
 
 .tables {
   border-bottom: 0.5px solid lightgrey;
-  display: inline;
+  /* display: inline; */
+  margin-top: 2em;
 }
 
 .table-icon {
