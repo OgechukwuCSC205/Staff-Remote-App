@@ -1,0 +1,21 @@
+.request-popup{
+  display: none;
+}
+
+.return-btn {
+  border: 2px solid wheat;
+  background-color: #843477;
+  border-radius: 5px;
+  margin-top: 2rem;
+  color: wheat;
+}
+
+.return-btn:hover{
+  background-color: wheat;
+  border-color: #843477;
+  color: #843477;
+  transition: 0.2ms;
+
+
+
+}

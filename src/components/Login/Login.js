@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Button from "react-bootstrap/Button";
 import LogForm from "../../Assets/loginImg1.svg";
 import "./Login.css";
 // import WemaForm from "../../Assets/Wema.svg";
@@ -142,14 +141,14 @@ const Login = () => {
               </div>
 
               <div>
-                <Button
+                <button
                   type="submit"
                   size="sm"
-                  className="btn-primary mb-3"
+                  className="btn-class mb-3"
                   onClick={handleSubmit}
                 >
                   Login
-                </Button>
+                </button>
               </div>
 
               <div>

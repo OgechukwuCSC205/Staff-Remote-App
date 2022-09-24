@@ -191,14 +191,14 @@ const Settings = () => {
             /> */}
 
             <div className="">
-              <Button
+              <button
                 type="submit"
                 // size="sm"
                 className="set-btn"
                 onClick={handleSubmit11}
               >
                 Submit
-              </Button>
+              </button>
               {(error.rDay || error.oDay) && (
                 <p className="validity">Enter a valid password</p>
               )}
