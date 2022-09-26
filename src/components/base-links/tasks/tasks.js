@@ -21,6 +21,19 @@ const Tasks = () => {
   //   }
   // }
 
+  // The code below updates the table when a task status is selected from the options
+  const handleSelect = (e) => {
+    setStatus(e.target.value);
+  };
+  function filterTasks() {
+    if (status === "All Tasks") {
+      return tasks;
+    } else {
+      return tasks.filter((task) => task.approval_status === status);
+    }
+  }
+
+
   function openRequest() {
   document.getElementById("myTable").style.display = "none";
   document.getElementById("myForm").style.display = "block";
@@ -56,9 +69,8 @@ const Tasks = () => {
             id="task"
             className="task-select"
             value={status}
-            onChange={(e) => {
-              setStatus(e.target.value);
-            }}
+            onChange={handleSelect}
+            onClick={filterTasks}
           >
             {taskSelect.map((value, index) => (
               <option key={index} value={value}>

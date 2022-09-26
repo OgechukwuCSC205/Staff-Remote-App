@@ -10,3 +10,13 @@ export function parseUserName () {
       return `${firstNameCapital} ${lastNameCapital}`;
 
 }
+
+
+export function authUsers(){
+  const userObject = JSON.parse(sessionStorage.getItem("user"));
+  if (userObject !== null) {
+    return true;    
+  }else {
+    return false;
+  }
+}
