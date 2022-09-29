@@ -47,6 +47,8 @@ const Tasks = () => {
     return num;
   }
 
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <div className="first-div-task">
       <div className="task-text">Tasks</div>
@@ -59,7 +61,7 @@ const Tasks = () => {
             placeholder="Search"
             className="form-input4"
           />
-          <button className="icon">
+          <button className="icon-button">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </div>
@@ -114,22 +116,16 @@ const Tasks = () => {
                 <i
                   class="fa fa-check table-icon icon-style tick-container"
                   aria-hidden="true"
-                  onClick={() => {
-                    showButton();
-                    hideButton();
-                  }}
+                  onClick={() => setIsOpen(true)}
                 >
-                  <ul id="approveButton">
-                    <button>Approve</button>
-                    <button>Reject</button>
-                  </ul>
+                  {/* <Modal open={isOpen} onClose={() => setIsOpen(false)}/> */}
                 </i>
               </td>
             </tr>
           ))}
+          <Modal open={isOpen} onClose={() => setIsOpen(false)} />
         </tbody>
       </table>
-      <Modal/>
     </div>
   );
 };
