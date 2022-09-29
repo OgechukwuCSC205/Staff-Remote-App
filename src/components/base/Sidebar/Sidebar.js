@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import "./Sidebar.css";
 
@@ -12,8 +12,17 @@ const Sidebar = () => {
     navigate("/");
   };
 
-  console.log(window.location)
-
+  console.log(window.location);
+ const mediaQuery = window.matchMedia("(min-width: 601px)");
+ function mediaResponse() {
+   if (mediaQuery.matches) 
+   {
+     document.getElementById("nav").style.display = "block";  
+     document.getElementById("icon").style.display = "none";   
+ } else {
+  document.getElementById("nav").style.display = "none";
+  document.getElementById("icon").style.display = "block";
+ }}
   // const [isActive, setIsActive] = useState(false);
 
   // const handleClick = () => {
@@ -43,6 +52,11 @@ const Sidebar = () => {
   //   {" "}
   //   User
   // </NavLink>;
+  useEffect(() => {
+    // mediaResponse();
+  })
+ 
+
 
   return (
     <>
@@ -65,7 +79,8 @@ const Sidebar = () => {
           //   : { color: "#000", background: "#000" }
           // }
         >
-          Home
+          <p id="nav">Home</p>
+          {/* <i id="icon" className="fa fa-home" aria-hidden="true"></i> */}
         </NavLink>
         <NavLink
           to="/dashboard/tasks"
@@ -76,7 +91,8 @@ const Sidebar = () => {
               : null
           }
         >
-          Tasks
+          <p id="nav">Tasks</p>
+          {/* <i id="icon" className="fa fa-bookmark" aria-hidden="true"></i> */}
         </NavLink>
         <NavLink
           to="/dashboard/requests"
@@ -87,7 +103,8 @@ const Sidebar = () => {
               : null
           }
         >
-          Request
+          <p id="nav">Request</p>
+          {/* <i id="icon" className="fa fa-envelope" aria-hidden="true"></i> */}
         </NavLink>
         <NavLink
           onClick={() => setLinks(3)}
@@ -98,10 +115,12 @@ const Sidebar = () => {
           }
           to="/dashboard/settings"
         >
-          Settings
+          <p id="nav">Settings </p>
+          {/* <i id="icon" className="fa fa-cog" aria-hidden="true"></i> */}
         </NavLink>
         <a href="/" onClick={logout}>
-          Logout
+          <p id="nav">Logout</p>
+          {/* <i id="icon" className="fa fa-sign-out" aria-hidden="true"></i> */}
         </a>
       </div>
     </>

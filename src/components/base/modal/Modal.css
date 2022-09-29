@@ -1,26 +1,42 @@
 .containers{
-    width: 25rem;
+    width: 23rem;
     min-width: 3rem;
     height:12rem;
-    border: 1px solid black;
+    min-height: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, 120%);
+    border: 1px solid gray;
     border-radius:5px;
     /* box shadow ----TO DO */
     margin: 0 auto;
-    z-index: 2;
+    z-index: 1000;
+    background-color: #d9d9d9;
+}
+
+.over-lay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1000;
 }
 
 .approval {
-    margin: 5px ;
-    margin-top: 1rem;
+    margin: 10px ;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
     display: flex;
-    justify-content: center;
 }
 
 .select-modal {
-    width: 7rem;
-    border: 0.5px solid black;
+    width: 8rem;
+    border: 0.1px solid grey;
     margin-left: 10px;
     border-radius: 5px;
+    outline: none;
 }
 
 .select-modal:focus {
@@ -29,9 +45,16 @@
 
 .rejection-Input {
     margin: 0 auto ;
-    display: block;
+    display: flex;
+    margin-left: 2.5rem;
+    
 }
 
+.approval-label{
+    margin-left: 0px;
+    margin-right: 1.5rem;
+
+}
 /* .rejection-label {
     display: block;
     margin-right: 2px;
@@ -42,10 +65,24 @@
     align-items: center;
 
 } */
+.comment-style{
+    /* display: block; */
+    margin-right: 1.5rem;
+}
 
+.rj-input{
+    border: 0.1px solid grey;
+    /* width: 11rem; */
+}
+
+.rj-input :focus{
+    outline: none;
+    border: 0.1px solid grey;
+    /* width: 11rem; */
+}
 .submit-modal {
     display: flex;
-    margin-top: 10px;
+    margin-top: 15px;
     flex-direction: row;
     justify-content: center;
     gap:10px;
