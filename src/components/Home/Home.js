@@ -3,6 +3,7 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "chart.js/auto";
 import { Doughnut } from "react-chartjs-2";
+
 import "./Home.css";
 
 export const Home = () => {

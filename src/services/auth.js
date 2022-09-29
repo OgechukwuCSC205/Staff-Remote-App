@@ -1,6 +1,7 @@
 export function parseUserName () {
     const userObject = JSON.parse(sessionStorage.getItem("user"));
-    const [firstName,lastNameWithEmail] = userObject.email.split(".");
+    if(!userObject) return;
+    const [firstName,lastNameWithEmail] = userObject?.email.split(".");
     const [lastName] = lastNameWithEmail.split("@");
     const firstNameCapital =
       firstName.charAt(0).toUpperCase() + firstName.slice(1); 
@@ -12,7 +13,7 @@ export function parseUserName () {
 }
 
 
-export function authUsers(){
+export function authUser(){
   const userObject = JSON.parse(sessionStorage.getItem("user"));
   if (userObject !== null) {
     return true;    

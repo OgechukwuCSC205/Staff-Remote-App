@@ -27,20 +27,41 @@
 
 .set-btn {
   width: 35rem;
+  height: 2.5rem;
+  color: antiquewhite;
   background-color: #843477;
   justify-content: center;
   margin-top: 1.2rem;
-  margin-left: 1.5rem;
   /* margin-left: 10rem; */
   border-radius: 5px;
   font-size: 1rem;
   font-weight: normal;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 1.5rem;
+  border-color: antiquewhite;
 }
 
+.set-btn:hover{
+  background-color: wheat;
+  color: black;
+}
 .underline-style-settings {
-  border-bottom: 0.9rem solid #ff1000;
-  line-height: 2rem;
+  /* border-bottom: 0.9rem solid #ff1000;
+  line-height: 2rem; */
+}
+
+.underline-style-settings::after {
+  content: "";
+  display: block;
+  width: 7rem;
+  height: 0.5rem;
+  background-color: #ff1000;
+
+  /* content: "";
+  display: block;
+  width: 8rem;
+  padding-top: 3px;
+  border-bottom: 0.9rem solid #ff1000; */
 }
 
 .main-div-set {

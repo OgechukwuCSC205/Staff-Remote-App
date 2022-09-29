@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
 import "./requests.css";
 // import Select from "react-select";
 
@@ -132,14 +131,14 @@ const Request = () => {
             />
 
             <div className="">
-              <Button
+              <button
                 type="submit"
                 // size="sm"
                 className="req-btn"
                 onClick={handleSubmit11}
               >
                 Submit
-              </Button>
+              </button>
               {(error.rDay || error.oDay) && (
                 <p className="validity">Enter a valid password</p>
               )}
