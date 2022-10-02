@@ -47,7 +47,7 @@ const Tasks = () => {
     return num;
   }
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="first-div-task">
@@ -123,7 +123,7 @@ const Tasks = () => {
               </td>
             </tr>
           ))}
-          <Modal open={isOpen} onClose={() => setIsOpen(false)} />
+          {isOpen && <Modal openMethod={setIsOpen} />}
         </tbody>
       </table>
     </div>
