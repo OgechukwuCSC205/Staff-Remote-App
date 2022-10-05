@@ -2,20 +2,20 @@
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
-.task-text::after{
+.task-text::after {
   content: "";
   display: block;
   width: 2rem;
   height: 0.5rem;
   background-color: #ff1000;
 }
-.task-search{
+.task-search {
   display: flex;
   justify-content: space-between;
 }
-.icon-button{
+.icon-button {
   width: 3rem;
-    height: 2.5rem;
+  height: 2.5rem;
   background-color: #843477;
   color: #fff;
   border: none;
@@ -30,7 +30,7 @@
   margin-top: 1rem;
 }
 
-.task-select{
+.task-select {
   margin-left: 1rem;
   margin-top: 1rem;
   width: 10rem;
@@ -39,7 +39,7 @@
   border-radius: 5px;
   outline: none;
   font-size: 16px;
-  padding: .5em;
+  padding: 0.5em;
   cursor: pointer;
 }
 
@@ -62,9 +62,6 @@
   margin-left: 1rem;
 }
 
-.tick-container{
-
-}
 
 .tick-container ul {
   padding: 0px;
@@ -73,15 +70,11 @@
   /* border: 1px solid black;
   background-color: gray; */
 }
-.tick-container ul:hover {
-  /* position:relative;
-  margin-top: -10px;
-  width: 3rem; */
-}
+
 .tick-container ul button {
   display: inline-block;
   list-style-image: none;
-  margin-left : 0.5rem;
+  margin-left: 0.5rem;
   margin-top: 0.5rem;
   padding: 0px;
   height: 1.5rem;
@@ -93,17 +86,11 @@
   margin-left: 0px;
 }
 
-
 .tick-container ul button:hover {
   background-color: #843477;
   color: wheat;
 }
-.tick-container ul:hover button {
-  /* color: red;
-  display: inline;
-  margin-bottom: 0px; */
 
-}
 .colored {
   background-color: lightgrey;
 }
@@ -121,35 +108,64 @@
   font-size: 15px;
 }
 
-@media (min-width: 1201px) {
-  
+
+@media (min-width: 950px) {
 }
 
-@media (min-width: 601px) and (max-width: 1200px) {
-  
-}
-
-@media (min-width: 401px) and (max-width: 600px) {
-  
-}
-
-@media (min-width: 361px) and (max-width: 400px) {
- .task-text{
-  font-size: 1.5rem;
- }
-
- .form-input4{
-  width: 9rem;
-  height: 1.8rem;
- }
- 
- .icon-button{
-  height: 1.8rem;
-  width: 2rem;
- }
-  .task-div, .task-select{
-  display: block;
-  margin-left: 0px;
-
+@media (min-width: 601px) and (max-width: 950px) {
+  .thead {
+    font-size: 0.9rem;
   }
- }
+
+  .tbody {
+    font-size: 0.8rem;
+    display: ;
+  }
+
+  .form-input4 {
+  text-indent: 2px;
+  font-size: 0.9rem;
+  outline: none;
+  width: 14rem;
+  height: 2rem;
+  border: 0.2px solid lightgrey;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.icon-button {
+  width: 2rem;
+  height: 2rem;
+}
+
+.task-select {
+  display: block;
+}
+}
+
+@media (min-width: 361px) and (max-width: 600px) {
+  .thead {
+    font-size: 0.9rem;
+  }
+
+  .tbody {
+    font-size: 0.8rem;
+    
+  }
+
+  .form-input4 {
+  text-indent: 2px;
+  font-size: 0.9rem;
+  outline: none;
+  width: 14rem;
+  height: 2rem;
+  border: 0.2px solid lightgrey;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.icon-button {
+  width: 2rem;
+  height: 2rem;
+}
+}

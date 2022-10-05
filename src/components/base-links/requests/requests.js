@@ -119,7 +119,7 @@ const Request = () => {
                 isMulti
               /> */}
 
-            <label htmlFor="text" className="form-labels mt-4">
+            <label htmlFor="text" className="form-labelss mt-4">
               Request Note
             </label>
             <textarea

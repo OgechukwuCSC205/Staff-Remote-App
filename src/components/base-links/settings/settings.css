@@ -9,6 +9,7 @@
   display: block;
   color: #000;
   font-size: 1.1rem;
+  margin-left: 1.5rem;
 }
 
 .form-inputs {
@@ -41,14 +42,11 @@
   border-color: antiquewhite;
 }
 
-.set-btn:hover{
+.set-btn:hover {
   background-color: wheat;
   color: black;
 }
-.underline-style-settings {
-  /* border-bottom: 0.9rem solid #ff1000;
-  line-height: 2rem; */
-}
+
 
 .underline-style-settings::after {
   content: "";
@@ -64,6 +62,94 @@
   border-bottom: 0.9rem solid #ff1000; */
 }
 
-.main-div-set {
-  /* margin-left: 3rem; */
+
+@media (min-width: 950px) {
+}
+
+@media (min-width: 601px) and (max-width: 950px) {
+  .set-text {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: none;
+    margin-left: 1.5rem;
+  }
+
+  .underline-style-settings::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #ff1000;
+  }
+
+  .form-labels {
+    display: block;
+    color: #000;
+    font-size: 1rem;
+    padding-bottom: 4px;
+    margin-left: 1.5rem;
+  }
+
+  .form-inputs {
+  text-indent: 1px;
+  font-size: 0.96rem;
+  outline: none;
+  height: 2.5rem;
+  border-radius: 5px;
+  margin-left: 1.5rem;
+  width: 500px;
+  max-width: 600px;
+  display: block;
+}
+
+  .set-btn {
+    width: 500px;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 600px) {
+  .set-text {
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: none;
+    margin-left: 1.5rem;
+  }
+
+  .underline-style-settings::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background-color: #ff1000;
+  }
+
+  .form-labels {
+    display: block;
+    color: #000;
+    font-size: 0.95rem;
+    padding-bottom: 4px;
+    margin-left: 1.5rem;
+  }
+
+  .form-inputs {
+  text-indent: 1px;
+  font-size: 0.96rem;
+  outline: none;
+  height: 2.5rem;
+  border-radius: 5px;
+  margin-left: 1.5rem;
+  width: 400px;
+  max-width: 600px;
+  display: block;
+}
+
+  .set-btn {
+    width: 400px;
+    max-width: 100%;
+    display: block;
+  }
 }
