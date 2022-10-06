@@ -62,7 +62,6 @@
   margin-left: 1rem;
 }
 
-
 .tick-container ul {
   padding: 0px;
   margin: 0px;
@@ -108,7 +107,6 @@
   font-size: 15px;
 }
 
-
 @media (min-width: 950px) {
 }
 
@@ -119,28 +117,27 @@
 
   .tbody {
     font-size: 0.8rem;
-    display: ;
   }
 
   .form-input4 {
-  text-indent: 2px;
-  font-size: 0.9rem;
-  outline: none;
-  width: 14rem;
-  height: 2rem;
-  border: 0.2px solid lightgrey;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
+    text-indent: 2px;
+    font-size: 0.9rem;
+    outline: none;
+    width: 14rem;
+    height: 2rem;
+    border: 0.2px solid lightgrey;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
 
-.icon-button {
-  width: 2rem;
-  height: 2rem;
-}
+  .icon-button {
+    width: 2rem;
+    height: 2rem;
+  }
 
-.task-select {
-  display: block;
-}
+  .task-select {
+    display: block;
+  }
 }
 
 @media (min-width: 361px) and (max-width: 600px) {
@@ -150,22 +147,21 @@
 
   .tbody {
     font-size: 0.8rem;
-    
   }
 
   .form-input4 {
-  text-indent: 2px;
-  font-size: 0.9rem;
-  outline: none;
-  width: 14rem;
-  height: 2rem;
-  border: 0.2px solid lightgrey;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
+    text-indent: 2px;
+    font-size: 0.9rem;
+    outline: none;
+    width: 14rem;
+    height: 2rem;
+    border: 0.2px solid lightgrey;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
 
-.icon-button {
-  width: 2rem;
-  height: 2rem;
-}
+  .icon-button {
+    width: 2rem;
+    height: 2rem;
+  }
 }

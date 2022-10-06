@@ -13,11 +13,11 @@ const Sidebar = () => {
   };
 
   console.log(window.location);
- const mediaQuery = window.matchMedia("(min-width: 601px)");
+//  const mediaQuery = window.matchMedia("(min-width: 601px)");
  function mediaResponse() {
-   if (mediaQuery.matches) 
-   {
-     document.getElementById("nav").style.display = "block";  
+   if (document.getElementById("nav").style.display === "none") 
+   { 
+     document.getElementById("nav").style.display = "block";
      document.getElementById("icon").style.display = "none";   
  } else {
   document.getElementById("nav").style.display = "none";
@@ -61,7 +61,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="sidenav">
-        <i className="fa fa-bars iconic1 icon4" aria-hidden="true"></i>
+        <i className="fa fa-bars iconic1 icon4" aria-hidden="true" onClick={mediaResponse}></i>
         <NavLink
           // className="navbar-item"
           to="/dashboard"
@@ -79,8 +79,10 @@ const Sidebar = () => {
           //   : { color: "#000", background: "#000" }
           // }
         >
-          <p id="nav">Home</p>
-          {/* <i id="icon" className="fa fa-home" aria-hidden="true"></i> */}
+          <p id="nav" className="side-text">
+            Home
+          </p>
+          <i id="icon" className="fa fa-home side-icon" aria-hidden="true"></i>
         </NavLink>
         <NavLink
           to="/dashboard/tasks"
@@ -91,8 +93,14 @@ const Sidebar = () => {
               : null
           }
         >
-          <p id="nav">Tasks</p>
-          {/* <i id="icon" className="fa fa-bookmark" aria-hidden="true"></i> */}
+          <p id="nav" className="side-text">
+            Tasks
+          </p>
+          <i
+            id="icon"
+            className="fa fa-bookmark side-icon"
+            aria-hidden="true"
+          ></i>
         </NavLink>
         <NavLink
           to="/dashboard/requests"
@@ -103,8 +111,14 @@ const Sidebar = () => {
               : null
           }
         >
-          <p id="nav">Request</p>
-          {/* <i id="icon" className="fa fa-envelope" aria-hidden="true"></i> */}
+          <p id="nav" className="side-text">
+            Request
+          </p>
+          <i
+            id="icon"
+            className="fa fa-envelope side-icon"
+            aria-hidden="true"
+          ></i>
         </NavLink>
         <NavLink
           onClick={() => setLinks(3)}
@@ -115,12 +129,20 @@ const Sidebar = () => {
           }
           to="/dashboard/settings"
         >
-          <p id="nav">Settings </p>
-          {/* <i id="icon" className="fa fa-cog" aria-hidden="true"></i> */}
+          <p id="nav" className="side-text">
+            Settings{" "}
+          </p>
+          <i id="icon" className="fa fa-cog side-icon" aria-hidden="true"></i>
         </NavLink>
         <a href="/" onClick={logout}>
-          <p id="nav">Logout</p>
-          {/* <i id="icon" className="fa fa-sign-out" aria-hidden="true"></i> */}
+          <p id="nav" className="side-text">
+            Logout
+          </p>
+          <i
+            id="icon"
+            className="fa fa-sign-out side-icon"
+            aria-hidden="true"
+          ></i>
         </a>
       </div>
     </>
