@@ -1,5 +1,6 @@
 import { Route } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getTasks } from "../../../services/utility";
 import { Update } from "../../update/Update";
 // import TableData from "../../../db.json/tasks";
@@ -10,6 +11,8 @@ const Tasks = () => {
   const [tasks, setTasks] = useState([]);
   const [status, setStatus] = useState("");
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     getTasks()
       .then((res) => res)
@@ -18,27 +21,15 @@ const Tasks = () => {
 
   const taskSelect = ["All Tasks", "Approved", "Pending"];
 
+  
   // function approved () {
   //   if (info.approval_status === "Approved") {
 
   //   }
   // }
 
-  // The code below updates the table when a task status is selected from the options
-  const handleSelect = (e) => {
-    setStatus(e.target.value);
-  };
-  function filterTasks() {
-    if (status === "All Tasks") {
-      return tasks;
-    } else {
-      return tasks.filter((task) => task.approval_status === status);
-    }
-  }
-
-
-  function openRequest() {
-    <Route path="/dashboard/tasks/update" element={<Update />} />;
+  function openRequest(idx) {
+    navigate(`/dashboard/update/${idx}`)
     // return num;
   }
 
@@ -60,7 +51,7 @@ const Tasks = () => {
   //   return num;
   // }
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="first-div-task">
@@ -121,7 +112,7 @@ const Tasks = () => {
                   class="fa fa-eye table-icon"
                   aria-hidden="true"
                   onClick={() => {
-                    openRequest();
+                    openRequest(index);
                     // window.myIndex = getRequest(index);
                   }}
                 ></i>
@@ -135,7 +126,7 @@ const Tasks = () => {
               </td>
             </tr>
           ))}
-          <Modal open={isOpen} onClose={() => setIsOpen(false)} />
+          {isOpen && <Modal openMethod={setIsOpen} />}
         </tbody>
       </table>
     </div>

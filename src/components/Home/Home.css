@@ -1,115 +1,116 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
-.wrapper{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+.home-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
-.doughnut{
-    width: 30%;
-    margin-left: 60%;
-    display: block;
+.doughnut {
+  width: 30%;
+  margin-left: 60%;
+  display: block;
 }
-.card-container{
-    width: 500px;
-    height: 326px;
-    background-color: #FFFFDD;
-    border: 0.3px solid rgb(192, 189, 189);
-    border-radius: 10px;
-    margin-top: 20px;
+.card-container {
+  width: 500px;
+  height: 326px;
+  background-color: #ffffdd;
+  border: 0.3px solid rgb(192, 189, 189);
+  border-radius: 10px;
+  margin-top: 20px;
 }
-.card-text{
-    font-size: 14px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 1.5rem;
-    margin-left: 4rem;
-    margin-bottom: 0;
+.card-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 1.5rem;
+  margin-left: 4rem;
+  margin-bottom: 0;
 }
-.card-desc{
-    font-size: 23px;
-    font-weight: 700;
-    color: #843477;
-    margin-left: 4rem;
+.card-desc {
+  font-size: 23px;
+  font-weight: 700;
+  color: #843477;
+  margin-left: 4rem;
 }
-.legend-container{
-    margin-left: 4em;
-    margin-bottom: 1.5em;
-    /* display: flex; */
+.legend-container {
+  margin-left: 4em;
+  margin-bottom: 1.5em;
+  /* display: flex; */
 }
-.legend-wrap{
-    display: flex;
+.legend-wrap {
+  display: flex;
 }
-.legend__from-home{
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #843477;
-    margin-right: 0;
+.legend__from-home {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #843477;
+  margin-right: 0;
 }
-.legend__the-office{
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #9A7B6C;
-    margin-right: 0;
+.legend__the-office {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #9a7b6c;
+  margin-right: 0;
 }
-.from-home{
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
-    font-weight: 700;
-    color: #843477;
-    margin-left: 1em;
+.from-home {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  font-weight: 700;
+  color: #843477;
+  margin-left: 1em;
 }
 .the-office {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
-    font-weight: 700;
-    color: #9A7B6C;
-    margin-left: 1em;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  font-weight: 700;
+  color: #9a7b6c;
+  margin-left: 1em;
 }
-.link__view-history{
-    color: #01BBBB;
-    text-decoration: none;
-    margin-top: 2em;
-    font-size: 23px;
-    font-weight: 500;
-    line-height: 34px;
-    margin-left: .3em;
+.link__view-history {
+  color: #01bbbb;
+  text-decoration: none;
+  margin-top: 2em;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 34px;
+  margin-left: 0.3em;
 }
-.details{
-    margin-top: 3em;
-    margin-bottom: 5em;
-    margin-left: 1em;
+.details {
+  margin-top: 3em;
+  margin-bottom: 5em;
+  margin-left: 1em;
 }
-.details p{
-    color: #843477;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
+.details p {
+  color: #843477;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
 }
 .details span {
-    color: #000000;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
 }
-.react-calender{
-    width: 429px;
-    /* height: 350px; */
-    background-color: #FFFFDD;
-    border-radius: 10px;
-    /* margin-bottom: 2em; */
-    margin-top: 5em;
+.react-calender {
+  width: 429px;
+  /* height: 350px; */
+  background-color: #ffffdd;
+  border-radius: 10px;
+  /* margin-bottom: 2em; */
+  margin-top: 5em;
 }
 
-.date-text{
-    display: flex;
-    justify-content: flex-end;
-    max-width: 1081px;
+.date-text {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1081px;
+  font-size: 1.4rem;
 }
 /* .react-calendar__month-view__weekdays {
     color: blue;
@@ -119,3 +120,122 @@
 .react-calendar__navigation button {
     font-size: 1em;
 } */
+
+
+@media (min-width: 950px) {
+}
+
+@media (min-width: 601px) and (max-width: 950px) {
+    .home-wrapper{
+        display: block;
+    }
+    .card-container{
+        width: 400px;
+        height: 230px;
+
+    }
+    .card-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  margin-bottom: 0;
+}
+.card-desc {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #843477;
+  margin-left: 2rem;
+}
+.legend-container {
+  margin-left: 1em;
+  margin-bottom: 1.5em;
+  /* display: flex; */
+}
+.legend-wrap {
+  display: flex;
+  
+}
+
+.doughnut{
+    margin-top: 0px;
+}
+.legend__from-home {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #843477;
+  margin-right: 0;
+  font-size: 0.4rem;
+}
+.legend__the-office {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #9a7b6c;
+  margin-right: 0;
+}
+.from-home {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  font-weight: 700;
+  color: #843477;
+  margin-left: 1em;
+}
+.the-office {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  font-weight: 700;
+  color: #9a7b6c;
+  margin-left: 1em;
+}
+.link__view-history {
+  color: #01bbbb;
+  text-decoration: none;
+  margin-top: 2em;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 34px;
+  margin-left: 0.3em;
+}
+.details {
+  margin-top: 3em;
+  margin-bottom: 5em;
+  margin-left: 1em;
+}
+.details p {
+  color: #843477;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.details span {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.react-calender {
+  width: 429px;
+  /* height: 350px; */
+  background-color: #ffffdd;
+  border-radius: 10px;
+  /* margin-bottom: 2em; */
+  margin-top: 5em;
+}
+
+.date-text {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1081px;
+  font-size: 1.4rem;
+}
+  
+}
+
+@media (min-width: 361px) and (max-width: 600px) {
+  
+}

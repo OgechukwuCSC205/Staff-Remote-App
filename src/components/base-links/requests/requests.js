@@ -56,7 +56,7 @@ const Request = () => {
             {/* <hr /> */}
 
             <div className="mb-5">
-              <label htmlFor="officeDays" className="form-labels mt-4 mb-1">
+              <label htmlFor="officeDays" className="form-labelss mt-4 mb-1">
                 Days in the Office
               </label>
               {/* //map through here when you understand algorthm */}
@@ -89,7 +89,7 @@ const Request = () => {
                   <option key={index}>{value}</option>
                 ))} */}
             <div className="mb-5">
-              <label htmlFor="remoteDays" className="form-labels mt-4 mb-1">
+              <label htmlFor="remoteDays" className="form-labelss mt-4 mb-1">
                 Days working from home
               </label>
 
@@ -119,7 +119,7 @@ const Request = () => {
                 isMulti
               /> */}
 
-            <label htmlFor="text" className="form-labels mt-4">
+            <label htmlFor="text" className="form-labelss mt-4">
               Request Note
             </label>
             <textarea

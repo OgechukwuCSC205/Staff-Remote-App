@@ -34,7 +34,6 @@ body {
   padding-right: 2rem;
 }
 
-
 .iconic {
   color: #ffffff;
   font-size: xx-large;
@@ -68,8 +67,6 @@ body {
   display: none;
 }
 
-
-
 /* .sidenav a {
   padding: 30px 0px 23px 0px;
   text-decoration: none;
@@ -84,9 +81,7 @@ body {
   background-color: #d9d9d9;
 } */
 
-
 @media screen and (max-height: 450px) {
-  
 }
 
 @media screen and (max-width: 600px) {
@@ -115,38 +110,40 @@ body {
   }
 }
 
-
 @media (min-width: 1201px) {
-  
 }
 
 @media (min-width: 601px) and (max-width: 1200px) {
-  
+  .iconic {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
-  
+  .iconic {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 361px) and (max-width: 400px) {
   .topnav {
-  overflow: hidden;
-  width: 100%;
-  background-color: #843477;
-  /* position: fixed; */
-  margin-left: auto;
-  height: 3rem;
-  position: sticky;
-  top: 0;
-  /* z-index: 2; */
-} 
-.fa-div {
-  text-align: end;
-  padding-top: 0.1rem;  
-}
-.fa-p, .iconic{
-  font-size: 0.8rem;
-}
+    overflow: hidden;
+    width: 100%;
+    background-color: #843477;
+    margin-left: auto;
+    height: 3rem;
+    position: sticky;
+    top: 0;
+    /* z-index: 1000; */
+  }
+  .fa-div {
+    text-align: end;
+    padding-top: 0.1rem;
+  }
+  .fa-p,
+  .iconic {
+    font-size: 0.7rem;
+  }
 }
 
 /* @media (max-width: 360px) {
@@ -154,11 +151,11 @@ body {
   overflow: hidden;
   background-color: #843477;
   /* position: fixed; */
-  
-  /* height: 6rem;
+
+/* height: 6rem;
   position: sticky;
   top: 0; */
-  /* z-index: 2; 
+/* z-index: 2; 
 } 
   
 } */

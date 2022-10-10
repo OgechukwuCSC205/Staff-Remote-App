@@ -3,11 +3,10 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "chart.js/auto";
 import { Doughnut } from "react-chartjs-2";
-
 import "./Home.css";
 
 export const Home = () => {
-    const [value, onChange] = useState(new Date());
+  const [value, onChange] = useState(new Date());
 
   const state = {
     labels: ["From Home", "In The Office"],
@@ -31,18 +30,16 @@ export const Home = () => {
           boxWidth: 10,
           padding: 20,
         },
-      }
-    }
+      },
+    },
   };
-
-  
 
   return (
     <>
       <div className="date">
         <p className="date-text">{new Date().toDateString()}</p>
       </div>
-      <div className="wrapper">
+      <div className="home-wrapper">
         <div className="card-container">
           <p className="card-text">Today you're working:</p>
           <span className="card-desc">From Home</span>
@@ -81,8 +78,8 @@ export const Home = () => {
             value={value}
             className="react-calender"
           />
-          </div>
-        </div>{" "}
+        </div>
+      </div>{" "}
     </>
   );
 };

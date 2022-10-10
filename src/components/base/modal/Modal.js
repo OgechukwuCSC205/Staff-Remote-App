@@ -3,7 +3,7 @@ import { useState } from "react";
 import ReactDom from "react-dom";
 import "./Modal.css";
 
-export const Modal = ({ open, onClose }, props) => {
+export const Modal = ({ openMethod }, props) => {
   const [selectState, setSelectState] = useState("approved");
   const [comment, setComment] = useState("");
   const fileStatus = ["Approved", "Reject"];
@@ -16,12 +16,24 @@ export const Modal = ({ open, onClose }, props) => {
     setComment(e.target.value);
   };
 
-  if (!open) return null;
+  // if (!open) return null;
 
   return ReactDom.createPortal(
     <>
-      <div className="over-lay">
-        <div className="containers">
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+          openMethod(false);
+        }}
+        className="over-lay"
+      >
+        <div
+          onClick={(e) => {
+            e.stopPropagation();
+            openMethod(true);
+          }}
+          className="containers"
+        >
           <form>
             <div className="approval">
               <div>
@@ -85,7 +97,11 @@ export const Modal = ({ open, onClose }, props) => {
                   height: "2rem",
                   border: "none",
                 }}
-                onClick={onClose}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  openMethod(false);
+                }}
               >
                 Cancel
               </button>

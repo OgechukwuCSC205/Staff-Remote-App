@@ -6,10 +6,6 @@
   margin-left: 1.5rem;
 }
 
-.underline-style {
-  /* border-bottom-width: 0.9rem; */
-}
-
 .underline-style::after {
   /* content: "";
   display: block;
@@ -31,7 +27,7 @@ hr {
   border: none;
   color: #ff1000;
 }
-.form-labels {
+.form-labelss {
   display: block;
   color: #000;
   font-size: 1.1rem;
@@ -101,6 +97,108 @@ hr {
   color: black;
 }
 
-.main-div {
-  /* margin-left: 3rem; */
+
+@media (min-width: 950px) {
+}
+
+@media (min-width: 601px) and (max-width: 950px) {
+  .req-text {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: none;
+    margin-left: 1.5rem;
+  }
+
+  .underline-style::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background-color: #ff1000;
+  }
+
+  .form-labelss {
+    display: block;
+    color: #000;
+    font-size: 1.1rem;
+    padding-bottom: 4px;
+    margin-left: 1.5rem;
+  }
+
+  .checkbox-style {
+    /* width: 3rem;
+  height: 3rem; */
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.96rem;
+    width: 9rem;
+    border: 1px solid lightslategray;
+    border-radius: 6px;
+    padding: 8px;
+  }
+
+  .form-inputs1 {
+    width: 600px;
+    max-width: 100%;
+    display: block;
+  }
+
+  .req-btn {
+    width: 600px;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 600px) {
+  .req-text {
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: none;
+    margin-left: 1.5rem;
+  }
+
+  .underline-style::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background-color: #ff1000;
+  }
+
+  .form-labelss {
+    display: block;
+    color: #000;
+    font-size: 1.2rem;
+    padding-bottom: 4px;
+    margin-left: 1.5rem;
+  }
+
+  .checkbox-style {
+    /* width: 3rem;
+  height: 3rem; */
+    cursor: pointer;
+    display: flex;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    width: 9rem;
+    border: 1px solid lightslategray;
+    border-radius: 6px;
+    padding: 8px;
+  }
+
+  .form-inputs1 {
+    width: 400px;
+    max-width: 100%;
+    display: block;
+  }
+
+  .req-btn {
+    width: 400px;
+    max-width: 100%;
+    display: block;
+  }
 }
