@@ -57,8 +57,8 @@ export const Home = () => {
               <span className="the-office">In The Office</span>
             </div>
           </div>
-          <br />
-          <div className="link__view-history">
+          {/* <br /> */}
+          {/* <div className="link__view-history">
             <a className="link__view-history" href="/">
               View History
             </a>
@@ -70,7 +70,7 @@ export const Home = () => {
             <p>
               Team Leader: <span>Nancy Ogunbanjo</span>
             </p>
-          </div>
+          </div> */}
         </div>
         <div className="calender-container">
           <Calendar
@@ -80,6 +80,21 @@ export const Home = () => {
           />
         </div>
       </div>{" "}
+      <div>
+        <div className="link__view-history">
+          <a className="link__view-history" href="/">
+            View History
+          </a>
+        </div>
+        <div className="details">
+          <p>
+            Line Manager: <span>Jerry Okoro</span>
+          </p>
+          <p>
+            Team Lead: <span>Nancy Ogunbanjo</span>
+          </p>
+        </div>
+      </div>
     </>
   );
 };

@@ -45,7 +45,7 @@ const Tasks = () => {
     }
   }
 
-  function hideButton() {}
+  // function hideButton() {}
 
   // function getRequest(num) {
   //   return num;
@@ -75,8 +75,7 @@ const Tasks = () => {
             id="task"
             className="task-select"
             value={status}
-            onChange={handleSelect}
-            onClick={filterTasks}
+            onChange={(e) => setStatus(e.target.value)}
           >
             {taskSelect.map((value, index) => (
               <option key={index} value={value}>
