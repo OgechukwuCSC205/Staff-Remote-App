@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
 // import Form from "react-bootstrap/Form";
 import "./Registration.css";
 import RegForm from "../../Assets/Reg_Image.svg";
@@ -22,6 +21,7 @@ const Registration = () => {
   const roles = ["Line Manager", "Team Lead", "Team Member"];
 
   const [department, setDepartment] = useState("Finance and Accounting");
+  const [staffId, setStaffId] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("Line Manager");
@@ -83,6 +83,21 @@ const Registration = () => {
                 ))}
               </select>
 
+              <label htmlFor="staffID" className="form-label1 mt-4">
+                Staff ID
+              </label>
+              <input
+                type="email"
+                placeholder="Enter Staff ID"
+                required
+                maxLength={30}
+                className="form-input1"
+                value={staffId}
+                onChange={(e) => {
+                  setStaffId(e.target.value);
+                }}
+              />
+
               <label htmlFor="email" className="form-label1 mt-4">
                 Email
               </label>
@@ -97,7 +112,7 @@ const Registration = () => {
                   setEmail(e.target.value);
                 }}
               />
-
+        
               <label htmlFor="password" className="form-label1 mt-4">
                 Password
               </label>
@@ -115,33 +130,35 @@ const Registration = () => {
 
               {error.password && <p>Enter a valid password</p>}
 
-              <label htmlFor="roles" className="form-label1 mt-4">
-                Roles
-              </label>
+             
+                <label htmlFor="roles" className="form-label1 mt-4">
+                  Unit
+                </label>
 
-              <select
-                name="roles"
-                id="roles"
-                className="form-input1"
-                value={role}
-                onChange={(e) => {
-                  setRole(e.target.value);
-                }}
-              >
-                {roles.map((value, index) => (
-                  <option key={index}>{value}</option>
-                ))}
-              </select>
+                <select
+                  name="roles"
+                  id="roles"
+                  className="form-input1"
+                  value={role}
+                  onChange={(e) => {
+                    setRole(e.target.value);
+                  }}
+                >
+                  {roles.map((value, index) => (
+                    <option key={index}>{value}</option>
+                  ))}
+                </select>
+             
 
               <div>
-                <Button
+                <button
                   type="submit"
                   size="sm"
                   className="btn1-primary mb-1"
                   onClick={handleSubmit1}
                 >
                   Submit
-                </Button>
+                </button>
               </div>
 
               <div>

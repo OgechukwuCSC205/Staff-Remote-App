@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import "./Sidebar.css";
 
@@ -12,8 +12,17 @@ const Sidebar = () => {
     navigate("/");
   };
 
-  console.log(window.location)
-
+  console.log(window.location);
+//  const mediaQuery = window.matchMedia("(min-width: 601px)");
+ function mediaResponse() {
+   if (document.getElementById("nav").style.display === "none") 
+   { 
+     document.getElementById("nav").style.display = "block";
+     document.getElementById("icon").style.display = "none";   
+ } else {
+  document.getElementById("nav").style.display = "none";
+  document.getElementById("icon").style.display = "block";
+ }}
   // const [isActive, setIsActive] = useState(false);
 
   // const handleClick = () => {
@@ -43,11 +52,16 @@ const Sidebar = () => {
   //   {" "}
   //   User
   // </NavLink>;
+  useEffect(() => {
+    // mediaResponse();
+  })
+ 
+
 
   return (
     <>
       <div className="sidenav">
-        <i className="fa fa-bars iconic1 icon4" aria-hidden="true"></i>
+        <i className="fa fa-bars iconic1 icon4" aria-hidden="true" onClick={mediaResponse}></i>
         <NavLink
           // className="navbar-item"
           to="/dashboard"
@@ -65,7 +79,10 @@ const Sidebar = () => {
           //   : { color: "#000", background: "#000" }
           // }
         >
-          Home
+          <p id="nav" className="side-text">
+            Home
+          </p>
+          <i id="icon" className="fa fa-home side-icon" aria-hidden="true"></i>
         </NavLink>
         <NavLink
           to="/dashboard/tasks"
@@ -76,7 +93,14 @@ const Sidebar = () => {
               : null
           }
         >
-          Tasks
+          <p id="nav" className="side-text">
+            Tasks
+          </p>
+          <i
+            id="icon"
+            className="fa fa-bookmark side-icon"
+            aria-hidden="true"
+          ></i>
         </NavLink>
         <NavLink
           to="/dashboard/requests"
@@ -87,7 +111,14 @@ const Sidebar = () => {
               : null
           }
         >
-          Request
+          <p id="nav" className="side-text">
+            Request
+          </p>
+          <i
+            id="icon"
+            className="fa fa-envelope side-icon"
+            aria-hidden="true"
+          ></i>
         </NavLink>
         <NavLink
           onClick={() => setLinks(3)}
@@ -98,10 +129,20 @@ const Sidebar = () => {
           }
           to="/dashboard/settings"
         >
-          Settings
+          <p id="nav" className="side-text">
+            Settings{" "}
+          </p>
+          <i id="icon" className="fa fa-cog side-icon" aria-hidden="true"></i>
         </NavLink>
         <a href="/" onClick={logout}>
-          Logout
+          <p id="nav" className="side-text">
+            Logout
+          </p>
+          <i
+            id="icon"
+            className="fa fa-sign-out side-icon"
+            aria-hidden="true"
+          ></i>
         </a>
       </div>
     </>

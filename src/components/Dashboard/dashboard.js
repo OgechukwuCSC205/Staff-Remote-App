@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Header from "../base/Header/Header";
 import Sidebar from "../base/Sidebar/Sidebar";
+import { authUser } from "../../services/auth";
 // import Form from "react-bootstrap/Form";
 import "./dashboard.css";
 

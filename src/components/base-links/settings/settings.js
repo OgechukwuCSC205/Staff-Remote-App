@@ -35,15 +35,15 @@ const Settings = () => {
     nUnit: false,
   });
 
-   const dept = [
-     "Finance and Accounting",
-     "Information Technology",
-     "Human Resources",
-     "Customer Service",
-     "Hardware Technology",
-   ];
+  const dept = [
+    "Finance and Accounting",
+    "Information Technology",
+    "Human Resources",
+    "Customer Service",
+    "Hardware Technology",
+  ];
 
-   const [department, setDepartment] = useState("Finance and Accounting");
+  const [department, setDepartment] = useState("Finance and Accounting");
 
   function handleSelect(data) {
     setFdept(data);
@@ -191,14 +191,14 @@ const Settings = () => {
             /> */}
 
             <div className="">
-              <Button
+              <button
                 type="submit"
                 // size="sm"
                 className="set-btn"
                 onClick={handleSubmit11}
               >
                 Submit
-              </Button>
+              </button>
               {(error.rDay || error.oDay) && (
                 <p className="validity">Enter a valid password</p>
               )}

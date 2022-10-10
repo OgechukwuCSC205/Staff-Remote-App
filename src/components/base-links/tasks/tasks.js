@@ -1,11 +1,17 @@
+import { Route } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getTasks } from "../../../services/utility";
+import { Update } from "../../update/Update";
 // import TableData from "../../../db.json/tasks";
+import { Modal } from "../../base/modal/Modal";
 import "./tasks.css";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState([]);
   const [status, setStatus] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getTasks()
@@ -15,24 +21,37 @@ const Tasks = () => {
 
   const taskSelect = ["All Tasks", "Approved", "Pending"];
 
+  
   // function approved () {
   //   if (info.approval_status === "Approved") {
 
   //   }
   // }
 
-  function openRequest() {
-  document.getElementById("myTable").style.display = "none";
-  document.getElementById("myForm").style.display = "block";
-  // return num;
+  function openRequest(idx) {
+    navigate(`/dashboard/update/${idx}`)
+    // return num;
+  }
 
-}
+  function showButton() {
+    if (
+      document.getElementById("approveButton").style.display === "inline-table"
+    ) {
+      document.getElementById("approveButton").style.display = "none";
+    } else if (
+      document.getElementById("approveButton").style.display === "none"
+    ) {
+      document.getElementById("approveButton").style.display = "inline-table";
+    }
+  }
+
+  function hideButton() {}
 
   function getRequest(num) {
     return num;
   }
 
-  
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="first-div-task">
@@ -46,8 +65,8 @@ const Tasks = () => {
             placeholder="Search"
             className="form-input4"
           />
-          <button className="icon">
-          <i class="fa fa-search" aria-hidden="true"></i>
+          <button className="icon-button">
+            <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </div>
         <div className="task-div">
@@ -94,29 +113,23 @@ const Tasks = () => {
                   class="fa fa-eye table-icon"
                   aria-hidden="true"
                   onClick={() => {
-                    openRequest();
-                    window.myIndex=getRequest(index);
+                    openRequest(index);
+                    // window.myIndex = getRequest(index);
                   }}
                 ></i>
                 <i
-                  class="fa fa-check table-icon icon-style"
+                  class="fa fa-check table-icon icon-style tick-container"
                   aria-hidden="true"
-                ></i>
+                  onClick={() => setIsOpen(true)}
+                >
+                  {/* <Modal open={isOpen} onClose={() => setIsOpen(false)}/> */}
+                </i>
               </td>
             </tr>
           ))}
+          {isOpen && <Modal openMethod={setIsOpen} />}
         </tbody>
       </table>
-      {tasks.map((info, myIndex) => (
-        <div className="request-popup" id="myForm">
-          <form key={myIndex} className="form-container">
-            <h3>Request from {info.name}</h3>
-            <>
-              {info.request}
-            </>
-          </form>
-        </div>
-      ))}
     </div>
   );
 };
